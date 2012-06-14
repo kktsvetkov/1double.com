@@ -1,0 +1,4 @@
+<TR>
+<TD VALIGN="top"><img src="#%IMAGESDIR%#/kletka.gif" align="absmidle" vspace=2></TD>
+<TD><a href="#%ACTION%#?cmd=#%CMD%#&id=#%ID%#" title="#%PRE%#">#%PRE%#</a><br>c #%MORE%#</TD>
+</TR><TR><TD><img src="#%IMAGESDIR%#/spacer.gif" height=7 width=1></TD></TR>

@@ -1,0 +1,11 @@
+<TABLE cellpadding=0 cellspacing=0 border=0 width="450" align="center">
+	<TR><TD><li><a href="#%MOVIE%#">#%FILM_TITLE%#</a></TD></TR>
+	<TR>
+	<TD width="100%" valign="top">
+		#%POKAJI%#
+		<font color="#666666">
+			#%DIRECTOR_TITLE%#
+			#%ACTORS_TITLE%#
+		</font>
+		<img src="#%IMAGESDIR%#/spacer.gif" vspace=10>#%KOGA%#</TD>
+</TR><TR><TD><img src="#%IMAGESDIR%#/spacer.gif" vspace=5></TD></TR></TABLE>

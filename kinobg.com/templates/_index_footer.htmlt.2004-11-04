@@ -1,0 +1,64 @@
+		</TD><!-- main column -->
+	</TR>
+</TABLE>
+
+<TABLE width="100%" cellpadding=0 cellspacing=0
+	border=0><TR><TD bgcolor="silver"><IMG
+	src="#%IMAGESDIR%#/spacer.gif"></TD></TR>
+	<TR><TD align="center"><IMG src="#%IMAGESDIR%#/spacer.gif"
+		width="760" height="2"><br><TABLE
+			cellpadding="0" cellspacing="0" border="0">
+			<TR><TD>#%BANNER2%#</TD></TR></TABLE><br>
+		<img src="#%IMAGESDIR%#/pd_.gif"><a href="#%ACTION%#?cmd=kinoprem">Кино</a><img
+			src="#%IMAGESDIR%#/pd_.gif"><a href="#%ACTION%#?cmd=videoprem">Видео</a><img
+			src="#%IMAGESDIR%#/pd_.gif"><a href="#%ACTION%#?cmd=dvdprem">DVD</a><img
+			src="#%IMAGESDIR%#/pd_.gif"><a href="#%ACTION%#?cmd=usaprem">Премиери</a><img
+			src="#%IMAGESDIR%#/pd_.gif"><a href="#%ACTION%#?cmd=charts">Класации</a><img
+			src="#%IMAGESDIR%#/pd_.gif"><a href="#%ACTION%#?cmd=statia">Втори дубъл</a><img
+			src="#%IMAGESDIR%#/pd_.gif">
+		<div class="note">Забележка: При изработването на проекта са използвани снимки и материали
+			от български и световни филмови компании</div><br>
+	</TD></TR>
+	<TR><TD bgcolor="black">
+		<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+		<td><img src="#%IMAGESDIR%#/nadpis.gif" vspace="2" hspace="2" alt="Първи Дубъл [#%TODAYSDATE%#]"></td><td align="right"></td></tr></table>
+	</TD></TR>
+</TABLE>
+<TABLE cellpadding="0" cellspacing="0" border="0"><TR><TD>#%BANNER4%#</TD></TR></TABLE>
+
+<DIV STYLE="z-index:-2;position:absolute;top:5px;left:6px;">
+<script language="javascript"><!-- 
+	n=navigator.appName; a=document; function t(){a.write("<img src=\"http://counter.search.bg", 
+	"/cgi-bin/c?_id=1double&_r="+r+"&_c="+c+"&_l="+escape(a.referrer)+"\" height=1 ", 
+	"width=1 border=0>");} c="0"; r="0";//--></script>
+	<script language="javascript1.2"><!-- 
+	b=screen; r=b.width; n!="Netscape"?c=b.colorDepth : c=b.pixelDepth;//-->
+	</script>
+	<script  language="javascript"><!-- 
+	t(); //--></script>
+
+	<noscript><img src="http://counter.search.bg/cgi-bin/c?_id=1double" width="1" height="1"></noscript>
+	<img name=im src="http://w1.extreme-dm.com/i.gif" height=1 border=0 width=1>
+
+<script language="javascript"><!--
+an=navigator.appName;d=document;
+function pr(){
+//d.write("<img src=\"http://w0.extreme-dm.com/0.gif?tag=1double&j=y&srw="+srw+"&srb="+srb+"&rs="+r+"&l="+escape(parent.document.referrer)+"\" height=1 width=1>");
+d.write("<img src=\"http://w0.extreme-dm.com/0.gif?tag=1double&j=y&srw="+srw+"&srb="+srb+"&rs="+r+"&l="+escape(d.referrer)+"\" height=1 width=1>");}
+srb="na";
+srw="na";
+//-->
+</script><script language="javascript1.2"><!--
+s=screen;srw=s.width;an!="Netscape"?
+srb=s.colorDepth:srb=s.pixelDepth;//-->
+</script><script language="javascript"><!--
+r=41;d.images?r=d.im.width:z=0;pr();
+//-->
+</script><noscript><img height=1 width=1 src="http://w0.extreme-dm.com/0.gif?tag=1double&j=n"></noscript>
+</DIV>
+
+
+</BODY>
+</HTML>
+
+

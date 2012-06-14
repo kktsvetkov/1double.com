@@ -1,0 +1,10 @@
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr><td><img src="#%IMAGESDIR%#/spacer.gif" width=15 height=1></td>
+<td width="0" valign="top">#%KARTINKI%#</td><td width="100%" valign="top"><img
+	src="#%IMAGESDIR%#/spacer.gif" height=4 width=1><TABLE
+	cellpadding=0 cellspacing=0 border=0>
+	#%BLOCKS%#
+	</TABLE>
+	</td></tr>
+</table>
+<br>

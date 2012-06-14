@@ -1,0 +1,17 @@
+<!--video premieri-->
+	<table border=0 cellspacing=0 cellpadding=0 width="100%">
+	<tr>
+		<td background="#%IMAGESDIR%#/_bg.png" colspan=2><img
+		src="#%IMAGESDIR%#/_video.gif"
+		alt="Видео премиерите тази седмица"></td>
+	</tr>
+	<tr bgcolor=white>
+		<td >#%PREMIERI%#</td>
+		<TD width="0%"><img src="#%IMAGESDIR%#/spacer.gif" width=10 height=1></TD>
+	</tr>
+	<tr><TD><div class="url"><img src="#%IMAGESDIR%#/spacer.gif"
+		width=1 height=10 align="absmiddle">#%WEEK%#</div></TD></tr>
+	</table>
+
+<!--wtori dubal-->
+#%ARTICLES%#

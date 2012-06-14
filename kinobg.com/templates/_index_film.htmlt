@@ -1,0 +1,31 @@
+<!--film-->
+	<img  src="#%IMAGESDIR%#/_film.gif" alt="Филм">
+	#%FILM%#
+
+<div style="margin-left: 3em;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3813963842297642";
+google_alternate_ad_url = "http://nakino.com/ad.neogen.html";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text";
+//2007-06-15: kino.bg, първи дубъл, kino.bg: Филм
+google_ad_channel = "6905490305+1462717009+8036613290";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "E1771E";
+google_color_text = "000000";
+google_color_url = "B47B10";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<!--kino premieri-->
+#%PREMIERI%#
+
+<!--programata na kinata-->
+#%PROGRAMA%#

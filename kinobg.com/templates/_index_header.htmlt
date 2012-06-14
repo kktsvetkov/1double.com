@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+<TITLE>Първи Дубъл - #%HTML_TITLE%# [#%TODAYSDATE%#]</TITLE>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="google-site-verification" content="fb2kPTWeRWaPSExALVIsaFQi7pPx9JV1mgywTaUeWFc" />
+
+<meta name="keywords" content="Сoфия, Пловдив, Бургас, Варна, Велико Търново, Габрово, Добрич, Разград, Русе, Свищов, Силистра, Асеновград, Шумен, кино,
+видео, DVD, премиери, кинопремиери, видеопремиери, филм, актьор, актриса, режисьор, заглавие, програма на кината, класации, boxoffice, Първи дубъл, новини,
+клюки, секс, гадже, персонаж, критици, награди, кандидати, фаворити
+Свилен Кръстев,
+Калоян Кирилов Цветков,
+Михаил Димитров">
+<link rel=stylesheet type="text/css" href="main.css" />
+
+<script type="text/javascript">
+var fileLoadingImage = "/lightbox2.03.3/images/loading.gif";		
+var fileBottomNavCloseImage = "/lightbox2.03.3/images/x.gif";
+var overlayOpacity = 0.4;
+</script>
+
+<script type="text/javascript" src="/lightbox2.03.3/js/prototype.js"></script>
+<script type="text/javascript" src="/lightbox2.03.3/js/scriptaculous.js?load=effects"></script>
+<script type="text/javascript" src="/lightbox2.03.3/js/lightbox.js"></script>
+
+<link rel="stylesheet" href="/lightbox2.03.3/css/lightbox.css" type="text/css" media="screen" />
+
+<script>
+<!--
+function photo(url,w,h) {
+src = 'view.html?' +url ;
+width = 14 + 4 + w;
+height = 25 + 4 + 14 + h;
+window.open(src,'','width='+width+',height='+height+',top=5,left=5') ;
+}
+//-->
+</script>
+<script type="text/javascript" src="http://static.robotreplay.com/nitobi.replay.js"></script>
+</HEAD>
+<BODY bgcolor=white leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
+
+<table cellpadding=0 cellspacing=0 width="100%" border=0>
+<tr><td align="center"><img
+	src="#%IMAGESDIR%#/spacer.gif" width="468" height=2><br>
+		<TABLE cellpadding="0" cellspacing="0" border="0">
+		<TR><TD>#%BANNER1%#</TD></TR></TABLE>
+	</td></tr>
+<tr><td	align="center" background="#%IMAGESDIR%#/pd1.gif">
+
+<TABLE cellpadding=0 cellspacing=0 border=0><TR>
+<TD><img src="#%IMAGESDIR%#/pd2.gif"><img
+	src="#%IMAGESDIR%#/pd3.gif"><img
+	src="#%IMAGESDIR%#/pd4.gif"><img
+	src="#%IMAGESDIR%#/pd5.gif"><img
+	src="#%IMAGESDIR%#/pd6.gif">
+</TD><TD align="left" valign="top" style="padding-top:4px;"><div style="font:bold 12px Arial;">#%WEEKDATE%#</div><div><img
+	src="#%IMAGESDIR%#/pd7.gif"><img
+	src="#%IMAGESDIR%#/pd8.gif"><img
+	src="#%IMAGESDIR%#/pd9.gif"><img
+	src="#%IMAGESDIR%#/pd10.gif"></div></TD>
+</TR></TABLE>
+
+</td></tr></table>
+
+<!-- main -->
+<div align="center">
+<TABLE width="770" cellpadding=0 cellspacing=0 border=0>
+	<TR>
+		<!-- left column -->
+		<TD width="0%" valign="top"  background="#%IMAGESDIR%#/_.gif">
+			<table cellpadding=0 cellspacing=0 border=0>
+				<!--parwa stranica-->
+				#%FIRST%#
+				<!-- kino -->
+				<tr><td><a href="/kinoprem/0"><img
+					 src="#%IMAGESDIR%#/_kino.gif"
+					 alt="Премиерите тази седмица"
+					 border=0></a></td></tr>
+				
+				<tr><td><ul>#%KINO%#</ul></td></tr>
+				<tr><td><img src="#%IMAGESDIR%#/spacer.gif"
+					width=1 height=3></td></tr>
+
+				<!-- programa -->
+				<tr><td><a href="/programa/1"><img
+					 src="#%IMAGESDIR%#/_prog.gif"
+					 alt="Програмата на кината"
+					 border=0></a></td></tr>
+				
+				<tr><td><ul>#%GRAD%#</ul></td></tr>
+				<tr><td><img src="#%IMAGESDIR%#/spacer.gif"
+					width=1 height=3></td></tr>
+
+				<!-- video -->
+<!--
+				<tr><td><a href="/videoprem/2"><img
+					 src="#%IMAGESDIR%#/_video.gif"
+					 alt="Видео премиери" border=0></a></td></tr>
+				
+				<tr><td><ul>#%VIDEO%#</ul></td></tr>
+				<tr><td><img src="#%IMAGESDIR%#/spacer.gif"
+					width=1 height=3></td></tr>
+-->
+
+				<!-- dvd -->
+				<tr><td><a href="/dvdprem/3"><img
+					 src="#%IMAGESDIR%#/_dvd.gif"
+					 alt="DVD премиери" border=0></a></td></tr>
+				
+				<tr><td><ul>#%DVD%#</ul></td></tr>
+				<tr><td><img src="#%IMAGESDIR%#/spacer.gif"
+					width=1 height=3></td></tr>
+
+				<!-- usa -->
+				<tr><td><a href="/usaprem/4"><img
+					 src="#%IMAGESDIR%#/_usa.gif"
+					 alt="Световни кинопремиери" border=0></a></td></tr>
+				<tr><td><ul>#%USA%#</ul></td></tr>
+				<tr><td><img src="#%IMAGESDIR%#/spacer.gif" width=1 height=3></td></tr>
+
+				<!-- kino klasacii -->
+				<tr><td><a href="/klasacia/1"><img
+					 src="#%IMAGESDIR%#/_kino_chart.gif"
+					 alt="Класации" border=0></a></td></tr>
+				<tr><td><ul>#%CHARTS%#</ul></td></tr>
+				<tr><td><img src="#%IMAGESDIR%#/spacer.gif" width=1 height=3></td></tr>
+				
+				<!-- aktualno -->
+				<tr><td><a href="/statia/5/"><img
+					 src="#%IMAGESDIR%#/_akt.gif"
+					 alt="Актуално" border=0></a></td></tr>
+				<tr><td><ul>#%AKTUALNO%#<ul></td></tr>
+				<tr><td><img src="#%IMAGESDIR%#/spacer.gif" width=1 height=3></td></tr>
+
+			</table>
+<div align="right">
+<br>
+<a href="mailto:webmaster@1double.com" onClick="document.location.href='http://kaloyan.info/blog/'; return false;"><img border=0 hspace=5 src="#%IMAGESDIR%#/mrasnika.png"></a>
+<a href="mailto:lider_rousse@dir.bg"><img border=0 hspace=5 src="#%IMAGESDIR%#/lider.png" alt="АРОК &quot;Лидер&quot;"></a>
+</div>
+
+<div align="center" style="margin-bottom:5px;"><a
+	title="wap.kinobg.com"
+	href="http://wap.kinobg.com"><img
+		 src="#%IMAGESDIR%#/wap.kinobg.com-www.kino-bg.net.gif"
+		alt="wap.kinobg.com"
+		border="0"></a></div>
+
+<blockquote>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3813963842297642";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text";
+google_ad_channel = "1462717009+1825613086+9469100361+5078885886+6905490305";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "E1771E";
+google_color_text = "000000";
+google_color_url = "B47B10";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</blockquote>
+
+			<img src="#%IMAGESDIR%#/spacer.gif" height="20">
+			<TABLE cellpadding="0"
+				cellspacing="0"
+				border="0">
+			<TR><TD>#%BANNER3%#</TD></TR>
+			</TABLE>
+			
+		</TD>
+		<TD width="2%"></TD>
+
+		<!-- main column -->
+		<TD width="98%" valign="top" background="#%IMAGESDIR%#/_.gif">
+
+

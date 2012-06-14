@@ -1,0 +1,9 @@
+	<table border=0 cellspacing=0 cellpadding=0 width="100%">
+	<tr bgcolor=white><TD><img src="#%IMAGESDIR%#/spacer.gif" width=1 height=10></TD></tr>
+	<tr>
+		<td background="#%IMAGESDIR%#/_bg.png" colspan=2><img
+		src="#%IMAGESDIR%#/_bg.gif"
+		border=0><img border=0
+		src="#%IMAGESDIR%#/#%PIC%#"
+		alt="#%BLOCKTITLE%#"></td>
+	</tr></table>

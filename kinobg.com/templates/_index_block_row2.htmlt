@@ -1,0 +1,6 @@
+<TR><TD></TD><TD>#%BR%#<font color="gray" title="#%WHEN%#">#%WHEN%#</font></TD></TR>
+
+<TR>
+<TD VALIGN="top"><img src="#%IMAGESDIR%#/kletka.gif" align="absmidle" vspace=4></TD>
+<TD><a href="#%ACTION%#?cmd=#%CMD%#&id=#%ID%#" title="#%PRE%#">#%PRE%#</a></TD>
+</TR>

@@ -1,0 +1,14 @@
+RewriteEngine On
+
+## RewriteRule ^(film|namm|city|klasacia)/([0-9]+/?)$ /index.php?cmd=$1&id=$2
+## RewriteRule ^(film|namm|city|klasacia)/([0-9]+/?)?(.*)$ /$3
+
+RewriteRule ^(film|namm|city|klasacia|cinema|kinoprem|videoprem|dvdprem|usaprem|programa|statia)/([0-9]+/?)$ /index.php?cmd=$1&id=$2
+
+RewriteRule ^(film|namm|city|klasacia|cinema|kinoprem|videoprem|dvdprem|usaprem|programa|statia)/([0-9]+/?)?(.*)$ /$3
+
+
+
+
+
+
