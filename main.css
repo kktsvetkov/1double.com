@@ -1,0 +1,13 @@
+A {text-decoration:none;color:black;font-weight:bold;font-family:Tahoma,Verdana;font-size:11px}
+A:hover {color: #808080}
+
+td {text-decoration:none;color:black;font-family:Tahoma,Verdana;font-size:11px}
+td.j {text-align:justify;text-decoration:none;color:black;font-family:Tahoma,Verdana;font-size:11px}
+
+li {color:silver}
+div.url {text-align:right}
+div.when {color:gray;font-family:Tahoma,Verdana;font-size:11px;text-align:left}
+div.note {text-decoration:none;color:black;font-family:Tahoma,Verdana;font-size:11px}
+
+A.more {text-decoration:none;color:gray;font-weight:bold;font-family:Tahoma,Verdana;font-size:11px}
+A.more:hover {color: #aaaaaa;}
