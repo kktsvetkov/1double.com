@@ -1,0 +1,74 @@
+<CENTER>
+#%BACKUP_ERROR%#
+	
+
+	<TABLE bgcolor="white" cellspacing=0 cellpadding=0 border=0>
+<FORM ACTION="#%ACTION%#?cmd=backup" METHOD="POST" ENCTYPE="multipart/form-data">
+<INPUT TYPE="hidden" NAME="export" value="0">
+<INPUT TYPE="hidden" NAME="upload" value="0">
+<INPUT TYPE="hidden" NAME="import" value="0">
+<INPUT TYPE="hidden" NAME="delete" value="0">
+
+		<!--EXPORT-->
+		<TR><TD><img src="#%IMAGESDIR%#/spacer.gif" width=2></TD></TR>
+		<TR height=22>
+			<TD bgcolor="orange" COLSPAN="2"><b>&nbsp; Направи архив</b></TD>
+		</TR>
+		<TR height=22>
+			<TD>&nbsp;Коментари</TD>
+			<TD align="right" class="orange">#%LAST%#&nbsp;</TD>
+		</TR>
+		
+		<TR>
+			<TD COLSPAN="2"><TEXTAREA NAME="bckComments"
+				COLS="70" rows="5" class="a"></TEXTAREA></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN="2" ALIGN="center"><INPUT
+			onClick="javascript:document.forms[0].elements['export'].value=1;"
+			TYPE="image" alt="Добави нов архив" border="0"
+			src="#%IMAGESDIR%#/add.png"></TD>
+		</TR>
+		<TR><TD><img src="#%IMAGESDIR%#/spacer.gif" width=20></TD></TR>
+			
+		<!--UPLOAD-->
+		<TR height=22>
+			<TD bgcolor="orange" COLSPAN="2"><b>&nbsp; Добави архив на сървъра</b></TD>
+		</TR>
+		<TR height=22><TD COLSPAN="2">&nbsp;Изберете архив</TD></TR>
+		<TR>
+			<TD COLSPAN="2"><INPUT TYPE="FILE" NAME="bckFile" SIZE="56" class="a"></TD>
+		</TR>
+		<TR>
+			<TD COLSPAN="2"  ALIGN="center">
+				<INPUT TYPE="IMAGE" SRC="#%IMAGESDIR%#/add.png" BORDER="0"
+				onClick="javascript:document.forms[0].elements['upload'].value=1;"
+				ALT="Добави архив">
+			</TD>
+		</TR>
+		<TR><TD><img src="#%IMAGESDIR%#/spacer.gif" width=20></TD></TR>
+
+		<!--IMPORT-->
+		<TR height=22>
+			<TD COLSPAN="2" bgcolor="orange">
+				<b>&nbsp; Архиви</b>
+			</TD>
+		</TR>
+		<TR>
+			<TD COLSPAN="2"><table width="100%" cellpadding=0
+				cellspacing=0 border=0>#%BACKUPS%#</table>
+			</TD>
+		</TR>
+		<TR><TD><img src="#%IMAGESDIR%#/spacer.gif" height="2"></TD></TR>
+		<TR>
+			<TD COLSPAN="2" ALIGN="center">
+				<INPUT onClick="javascript:if(confirm('Сигурни ли сте, че искате да възстановите\nмаркираният архив?')){document.forms[0].elements['import'].value=1;}else{return false;}"
+				alt="Възстанови архив" type="image" border="0" src="#%IMAGESDIR%#/restore.png">
+				<INPUT alt="Изтрий архив" type="image" src="#%IMAGESDIR%#/delete.png" 
+				onClick="javascript: if (confirm('Сигурни ли сте, че искате да\nизтиете маркираните архиви?')){document.forms[0].elements['delete'].value=1;}else{return false;}">
+			</TD>
+		</TR>
+</FORM>
+	</TABLE>
+
+</CENTER>

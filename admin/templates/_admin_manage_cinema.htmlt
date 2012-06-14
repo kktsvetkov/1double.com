@@ -1,0 +1,35 @@
+<CENTER>
+
+#%ERROR%#
+
+	<table cellpadding=3 cellspacing=0 border=0>
+<form method="POST" action="#%ACTION%#?cmd=cinema&id=#%ID%#">
+<input type="hidden" name="Add" value=0>
+<input type="hidden" name="Delete" value=0>
+
+	<tr>
+		<td>Позиция<br><input type="text" class="a" name="NO" value="#%NO%#" size="4"></td>
+		<td>Добави кино<BR><input class="a" type="text" name="ADDCINEMA" value="#%ADDCINEMA%#"
+			size="30"><SELECT name="CITY" class="a">#%CITIES%#</SELECT></td>
+	</tr>
+	<tr><td colspan="2" align="right">
+		<input type="image" alt="Запиши кино" src="#%IMAGESDIR%#/write.png"
+		onClick="javascript:this.form.elements['Add'].value=1;" border=0> <a
+		href="#%ACTION%#?cmd=cinema&CITY=#%CITY2%#"><img border=0
+		src="#%IMAGESDIR%#/again.png" alt="Изчисти"></a>
+	</td></tr>
+
+	<tr><td colspan="2" bgcolor="orange">
+		<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 BORDER=0>
+		<TR><TD align="center">#%NONE%#</TD></TR>
+		#%CINEMAS%#
+		</TABLE>
+	</td></tr>
+
+	<tr><td align="right" colspan="2">
+		<a href="javascript:if (confirm('Да се изтрият ли маркираните кина?')){document.forms[0].elements['Delete'].value=1;document.forms[0].submit();}"><img
+		border=0 src="#%IMAGESDIR%#/delete.png" alt="Изтрий" vspace="3"></a>
+	</td></tr>
+</form>
+	</table>
+</CENTER>

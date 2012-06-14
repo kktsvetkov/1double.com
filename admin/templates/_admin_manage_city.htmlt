@@ -1,0 +1,36 @@
+<CENTER>
+#%ERROR%#
+
+	<img src="#%IMAGESDIR%#/spacer.gif" height="3"><table cellpadding=3 cellspacing=0 border=0>
+<form method="POST" action="#%ACTION%#?cmd=city&id=#%ID%#">
+<input type="hidden" name="Delete" value=0>
+<input type="hidden" name="Add" value=0>
+
+	<tr>
+		<td>Позиция<BR><input class="a" type="text" name="NO" size="4" value="#%NO%#"></td>
+		<td>Добави град<BR><input class="a" type="text" name="ADDCITY"
+		size="42" value="#%ADDCITY%#"><SELECT name="ACTIVE" class="a">
+			<OPTION value="yes" #%ACTIVEYES%#>активен
+			<OPTION value="no" #%ACTIVENO%#>неактивен
+			</SELECT></td>
+	</tr>
+	<tr><td colspan="2" align="right"><input type="image" alt="Запиши град" src="#%IMAGESDIR%#/write.png"
+		onClick="javascript:this.form.elements['Add'].value=1;"> <a href="#%ACTION%#?cmd=city"><img
+		src="#%IMAGESDIR%#/again.png" border=0 alt="Изчисти"></a></td></tr>
+
+	<tr><td colspan="2" bgcolor="orange">
+		<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 BORDER=0>
+
+			<TR HEIGHT="18" bgcolor="#FFE184"><TD COLSPAN="3">&nbsp;<B>Градове</B></TD></TR>
+			<TR><TD align="CENTER">#%NONE%#</TD></TR>
+		#%CITIES%#
+		</TABLE>
+	</td></tr>
+
+	<tr><td colspan="2" align="right"><a
+		href="javascript:if (confirm('Да се изтрият ли маркираните градове?')){document.forms[0].elements['Delete'].value=1;document.forms[0].submit();}"><img
+		border=0 src="#%IMAGESDIR%#/delete.png" alt="Изтрий"></a>
+	</td></tr>
+</form>
+</table>
+</CENTER>

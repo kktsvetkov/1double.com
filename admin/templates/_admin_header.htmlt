@@ -1,0 +1,13 @@
+<HTML>
+<HEAD>
+<TITLE>Първи Дубъл - #%HTML_TITLE%# [#%TODAYSDATE%#]</TITLE>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel=stylesheet type="text/css" href="admin.css">
+</HEAD>
+<BODY bgcolor="WHITE" leftmargin="0" topmargin="2" marginwidth="0" marginheight="2">
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+<TR><TD ALIGN="CENTER" colspan="2"><IMG SRC="#%IMAGESDIR%#/admin_logo.png" ALT="Първи Дубъл"></TD></TR>
+<TR><TD>#%FILM_NAV%#</TD><TD ALIGN="RIGHT">#%LOGGED%#</TD></TR>
+</TABLE>

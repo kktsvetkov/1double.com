@@ -1,0 +1,16 @@
+<TR><TD COLSPAN=6 BGCOLOR=orange><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR><TR bgcolor="white">
+	<TD ><input type="checkbox" name="c_#%CHECK%#"></TD>
+	<TD >	#%NO2%#.
+		<a href="#%MOVIE%#"><img align="absmiddle"
+		alt="Покажи филма" border=0 src="#%IMAGESDIR%#/show.png"></a>
+
+		<a href="#%ACTION%#?cmd=manage_chart&id=#%CHECK%#&chartid=#%CHARTID%#&WHEN=#%PRATI%#&PLACES=#%CHARTID%#">#%TITLE%#</a>
+		#%KOGA%#</TD>
+	
+	<TD>приход <b>#%BO2%#&nbsp;</b></TD>
+	
+	<TD>седмици <b>#%WEEKS2%#&nbsp;</b></TD>
+	<TD>екрани <b>#%SCREENS2%#&nbsp;</b></TD>
+	
+	<TD>общ приход <b>#%CBO2%#&nbsp;</b></TD>
+</TR>

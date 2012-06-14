@@ -1,0 +1,6 @@
+<TR BGCOLOR="white">
+	<TD WIDTH="0%"><INPUT TYPE="CHECKBOX" NAME="dd_#%DID%#"></TD>
+	<TD WIDTH="100%">#%NOM%#. <a href="#%ACTION%#?cmd=dvddistr&id=#%DID%#">#%TITLE%#</a></TD>
+	<TD WIDTH="0%"><img  src="#%IMAGESDIR%#/ok#%ISDEL%#.png"></TD>
+</TR>
+<TR BGCOLOR=orange><TD COLSPAN=3><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>

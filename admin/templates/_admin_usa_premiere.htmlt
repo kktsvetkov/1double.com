@@ -1,0 +1,132 @@
+<script>
+<!--//
+function Leap (Year)
+	{
+        	if (((Year % 4)==0) && ((Year % 100)!=0) || ((Year % 400)==0))
+		return 1
+        		else return 0;
+	}
+
+function Days (Month, Year)
+	{
+	if (Leap(Year)==1)
+                		L = 29;
+        		else L = 28;
+	var daysOfMonth = new Object();
+	daysOfMonth[1] = 31;
+	daysOfMonth[2] = L;
+	daysOfMonth[3] = 31;
+	daysOfMonth[4] = 30;
+	daysOfMonth[5] = 31;
+	daysOfMonth[6] = 30;
+	daysOfMonth[7] = 31;
+	daysOfMonth[8] = 31;
+	daysOfMonth[9] = 30;
+	daysOfMonth[10] = 31;
+	daysOfMonth[11] = 30;
+	daysOfMonth[12] = 31;
+
+	return daysOfMonth[Month];
+}
+
+function refreshDays(object, prefix)
+	{
+	iSelectedDayOption = object.form.elements['Day'+prefix].options.selectedIndex;
+	object.form.elements['Day'+prefix].options.length = 0;
+	Month = object.form.elements['Month'+prefix].options[object.form.elements['Month'+prefix].options.selectedIndex].value;
+	Year = object.form.elements['Year'+prefix].options[object.form.elements['Year'+prefix].options.selectedIndex].value;
+	var days = Days(Month, Year);
+
+	//opt = new Option();
+	//opt.text = '--Day--';
+	//opt.value = 0;
+	//object.form.elements['Day'+prefix].options[0] = opt;
+
+	for (i=1; i<=days; i++)
+		{
+		if (i<10)	value = '0' + String(i);
+			else value=String(i);
+		
+		opt = new Option();
+		opt.text = value;
+		opt.value = String(i);
+
+		if (i == iSelectedDayOption)
+      			opt.selected = true;
+			else opt.selected = false;
+  		object.form.elements['Day'+prefix].options[object.form.elements['Day'+prefix].length] = opt;
+		}
+
+	if (iSelectedDayOption > object.form.elements['Day'+prefix].options.length - 1)
+		iSelectedDayOption = 0;
+
+	object.form.elements['Day'+prefix].options.selectedIndex = iSelectedDayOption;
+	}
+-->
+</script>
+<CENTER>
+
+#%ERROR%#
+	<table cellspacing=2 cellpadding=0 border=0><tr>
+<form method="POST" action="#%ACTION%#?cmd=usa_new">
+<input type="hidden" name="Delete" value=0>
+<input type="hidden" name="Add" value=0>
+<input type="hidden" name="Show" value=0>
+<input type="hidden" name="WEEK" value="#%WEEK%#">
+
+		<td>&nbsp;Щатска премиера<br>
+			<select class="a" name="FILM">
+			<option value=0>Изберете заглавие от списъка с въведените филми
+			#%FILM%#</select><BR>
+		&nbsp;Седмица<img src="#%IMAGESDIR%#/spacer.gif" width=1 height=20 align="absmiddle"><br>
+<!--<select class="a" name="WEEK">#%WEEK%#</select>-->
+		<table cellspacing=0 border=0 cellpadding=0 width="100%"><tr>
+		<td width="0%">&nbsp;<a href="#%ACTION%#?cmd=usa_new&WHEN=#%PREV%#"><img
+			src="#%IMAGESDIR%#/prev.gif" align="absmiddle" alt="Предната седмица"
+			border=0></a></td>
+		<td width="100%" align="center"bgcolor="#FFE184"><b> &nbsp; #%DISPLAYWEEK%# &nbsp; </b></td>
+		<td width="0%"><a href="#%ACTION%#?cmd=usa_new&WHEN=#%NEXT%#"><img
+			src="#%IMAGESDIR%#/next.gif" align="absmiddle" alt="Следващата седмица"
+			border=0></a></td>
+		</tr></table>
+
+
+		<input type="image" alt="Запиши премиера за седмицата"
+			src="#%IMAGESDIR%#/write.png" vspace=2 hspace=2
+			onClick="javascript:this.form.elements['Add'].value=1;"><a
+			href="#%ACTION%#?cmd=usa_new&WHEN=#%GO%#&WEEK=#%GO%#"><img
+			vspace=2 src="#%IMAGESDIR%#/again.png" alt="Отказ" border=0></a><br>
+			<img src="#%IMAGESDIR%#/spacer.gif" width=1 height=10 border=0></td>
+	</tr></table>
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+	<tr><td bgcolor=orange><img src="#%IMAGESDIR%#/spacer.gif" height=3></td></tr>
+	<tr><td bgcolor="#FFE184" align=center>
+		 &nbsp; Премиерите за седмицата в която е
+<!--<SELECT NAME="WHEN" class="a">#%WHEN%#</SELECT>-->
+			<select class="a" name="Year1" onChange="refreshDays(this, '1')">
+			#%YEAR1%#
+			</select><select
+			class="a" name="Month1" onChange="refreshDays(this, '1')">
+			#%MONTH1%#
+			</select><select
+			class="a" name="Day1">
+			#%DAY1%#
+			</select>
+		<input type="image" border=0 src="#%IMAGESDIR%#/view.png"
+		alt="Покажи щатските премиери за седмицата" vspace=1 align="absmiddle"
+		onClick="javascript:this.form.elements['Show'].value=1;">
+
+</td></tr>
+<tr><td bgcolor=orange><img src="#%IMAGESDIR%#/spacer.gif" height=2></td></tr></table>
+
+	<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 BORDER=0>
+	#%PREMS%#
+	<TR><TD COLSPAN=5 BGCOLOR=orange><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>
+	<TR><TD COLSPAN=5><input type="image" src="#%IMAGESDIR%#/free.png" alt="Освободи премиерите" border=0 vspace=2 hspace=2
+onClick="javascript:if(confirm('Наистина ли желаете да освободите\nщатските премиери от избраната седмица?')){this.form.elements['Delete'].value=1;}else{return false;}">
+	</TD></TR></TABLE>
+
+
+</form>
+</CENTER>

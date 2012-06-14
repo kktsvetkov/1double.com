@@ -1,0 +1,28 @@
+<CENTER>
+#%LOGIN_ERROR%#
+
+	<TABLE cellspacing=3 cellpadding=0 border=0>
+<FORM ACTION="#%ACTION%#" METHOD="POST">
+<INPUT TYPE="HIDDEN" NAME="Login" VALUE="1">
+<INPUT TYPE="HIDDEN" NAME="Referer" VALUE="">
+<script>
+<!--
+document.forms[0].elements['Referer'].value = document.referrer;
+//-->
+</script>
+		<TR>
+			<TD>
+				Редактор<BR>
+				<input name="alias" value="#%OLD%#" class="a"><BR>
+			</TD>
+			<TD>
+				Парола<BR>
+				<input type="password" name="password" class="a">
+			</TD>
+		</TR>
+		<TR><TD align="center" colspan="2">
+			<input type="image" name="Login" alt="Влез" border="0" src="#%IMAGESDIR%#/login.png">
+		</TD></TR>
+	</TABLE>
+</FORM>
+</CENTER>

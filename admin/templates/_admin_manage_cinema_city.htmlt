@@ -1,0 +1,7 @@
+<TR>
+	<TD COLSPAN=3 BGCOLOR="#FFE184">
+		<a href="#%ACTION%#?cmd=agenda&WHERE=#%CITYID%#"><IMG BORDER="0"
+		ALIGN="absmiddle" VSPACE="4" SRC="#%IMAGESDIR%#/kletka.gif">#%CITY%#</a>
+	</TD>
+</TR>
+<TR BGCOLOR=orange><TD COLSPAN=3><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>

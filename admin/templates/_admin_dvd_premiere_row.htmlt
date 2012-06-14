@@ -1,0 +1,11 @@
+<TR><TD COLSPAN=5 BGCOLOR=orange><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR><TR bgcolor="white">
+	<TD width="0%"><input type="checkbox" name="dvd_#%CHECK%#"></TD>
+	<TD width="60%">
+		<a href="#%ACTION%#?cmd=insertfilm&ID=#%FILMID%#" target="v_#%FILMID%#"><img align="absmiddle"
+		alt="Покажи филма" border=0 src="#%IMAGESDIR%#/show.png"></a>
+
+		<a href="#%ACTION%#?cmd=dvd_new&id=#%CHECK%#&WEEK=#%PRATI%#&WHEN=#%PRATI%#">#%TITLE%#</a>
+		#%KOGA%#</TD>
+	<TD width="20%" align="right">#%DISTRI%#</TD>
+	<TD width="20%" align="right">#%LAST%#&nbsp;</TD>
+</TR>

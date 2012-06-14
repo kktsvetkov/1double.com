@@ -1,0 +1,52 @@
+<CENTER>
+#%ERROR%#
+
+	<table cellpadding=3 cellspacing=0 border=0>
+<form method="POST" action="#%ACTION%#?cmd=add_article" ENCTYPE="multipart/form-data">
+<input type="hidden" name="ID" value="#%ID%#">
+<input type="hidden" name="Add" value="0">
+<input type="hidden" name="Photo" value="0">
+<input type="hidden" name="Delete" value="">
+
+	<tr><td colspan=2 bgcolor="orange">
+		<table cellspacing=0 cellpadding=0 border=0>
+			<tr height="18">
+				<td bgcolor="#FFE184"><b>&nbsp; Информация</b></td>
+				<td rowspan="3"><img src="#%IMAGESDIR%#/spacer.gif" width="3"></td>
+				<td bgcolor="#FFE184"><b>&nbsp; Снимки &nbsp; &nbsp; </b></td>
+			</tr>
+			<tr><td><img src="#%IMAGESDIR%#/spacer.gif"></td><td><img src="#%IMAGESDIR%#/spacer.gif"></td></tr>
+			<tr><td valign="top" bgcolor="white">
+				<table cellpadding=0 cellspacing=1 border=0>
+				<tr><td rowspan=3><img src="#%IMAGESDIR%#/spacer.gif" width="2"></td>
+					<td><TABLE cellpadding="0" cellspacing="0" border=0>
+					<TR><TD>Избери снимка <BR><input type="file" class="a"
+						NAME="SNIMKA" size="32"></TD></TR>
+					<TR><TD><INPUT TYPE="IMAGE" SRC="#%IMAGESDIR%#/write.png"
+						border="0" ALT="Добави снимка" vspace=2
+						onClick="javascript:this.form.elements['Photo'].value=1;this.form.elements['Add'].value=1;"></TD>
+					</TR>
+					</TABLE></td>
+					<td rowspan=3><img src="#%IMAGESDIR%#/spacer.gif" width="2"></td>
+				</tr>
+				<tr><td>&nbsp;Заглавие<BR><input class="a" type="text" name="TITLE"
+						size="59" value="#%TITLE%#"></td></tr>
+				<tr><td><textarea class="a" name="INFO" cols="59" rows="22">#%INFO%#</textarea></td></tr>
+				</table>
+				
+				<input type="image" src="#%IMAGESDIR%#/write.png" alt="Запиши"
+					hspace=3 onClick="javascript:this.form.elements['Add'].value=1;">
+			</td>
+			<td valign="top" bgcolor="white"><!-- SPISAK NA SNIMITE --><img
+				src="#%IMAGESDIR%#/spacer.gif" height=1 width=180><br>#%SNIMKAS%#</td></tr>
+		</table>
+		
+	</td></tr>
+	<tr>
+		<td></td>
+		<td align="right"></td>
+	</tr>
+</form>
+</table>
+
+</CENTER>

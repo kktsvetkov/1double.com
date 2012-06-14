@@ -1,0 +1,149 @@
+<script>
+<!--//
+function Leap (Year)
+	{
+        	if (((Year % 4)==0) && ((Year % 100)!=0) || ((Year % 400)==0))
+		return 1
+        		else return 0;
+	}
+
+function Days (Month, Year)
+	{
+	if (Leap(Year)==1)
+                		L = 29;
+        		else L = 28;
+	var daysOfMonth = new Object();
+	daysOfMonth[1] = 31;
+	daysOfMonth[2] = L;
+	daysOfMonth[3] = 31;
+	daysOfMonth[4] = 30;
+	daysOfMonth[5] = 31;
+	daysOfMonth[6] = 30;
+	daysOfMonth[7] = 31;
+	daysOfMonth[8] = 31;
+	daysOfMonth[9] = 30;
+	daysOfMonth[10] = 31;
+	daysOfMonth[11] = 30;
+	daysOfMonth[12] = 31;
+
+	return daysOfMonth[Month];
+}
+
+function refreshDays(object, prefix)
+	{
+	iSelectedDayOption = object.form.elements['Day'+prefix].options.selectedIndex;
+	object.form.elements['Day'+prefix].options.length = 0;
+	Month = object.form.elements['Month'+prefix].options[object.form.elements['Month'+prefix].options.selectedIndex].value;
+	Year = object.form.elements['Year'+prefix].options[object.form.elements['Year'+prefix].options.selectedIndex].value;
+	var days = Days(Month, Year);
+
+	//opt = new Option();
+	//opt.text = '--Day--';
+	//opt.value = 0;
+	//object.form.elements['Day'+prefix].options[0] = opt;
+
+	for (i=1; i<=days; i++)
+		{
+		if (i<10)	value = '0' + String(i);
+			else value=String(i);
+		
+		opt = new Option();
+		opt.text = value;
+		opt.value = String(i);
+
+		if (i == iSelectedDayOption)
+      			opt.selected = true;
+			else opt.selected = false;
+  		object.form.elements['Day'+prefix].options[object.form.elements['Day'+prefix].length] = opt;
+		}
+
+	if (iSelectedDayOption > object.form.elements['Day'+prefix].options.length - 1)
+		iSelectedDayOption = 0;
+
+	object.form.elements['Day'+prefix].options.selectedIndex = iSelectedDayOption;
+	}
+-->
+</script>
+
+<CENTER>
+
+#%ERROR%#
+
+	<table cellspacing=0 cellpadding= 3 border=0><tr><td></td></tr><tr><td bgcolor="orange">
+
+<form method="POST" action="#%ACTION%#?cmd=dvd_new" ENCTYPE="multipart/form-data">
+<input type="hidden" name="id" value="#%ID%#">
+<input type="hidden" name="Delete" value=0>
+<input type="hidden" name="Add" value=0>
+<input type="hidden" name="Show" value=0>
+<input type="hidden" name="WEEK" value="#%WEEK%#">
+
+	<TABLE cellpadding=0 cellspacing=2 bgcolor="white"  border=0>
+		<tr><td rowspan="3" align="center"><img src="#%SNIMKA%#" border="0"></td>
+		<td>
+		
+			&nbsp;DVD дистибутор<br><select class="a" name="DISTR">#%DISTR%#</select><BR>
+			&nbsp;Седмица<br>
+<!--<select class="a" name="WEEK">#%WEEK%#</select>-->
+			<table cellspacing=0 border=0 cellpadding=0 bgcolor="#FFE184" width="250"><tr>
+			<td width="0%"><a href="#%ACTION%#?cmd=dvd_new&WHEN=#%PREV%#"><img
+					src="#%IMAGESDIR%#/prev.gif" align="absmiddle" alt="Предната седмица"
+					border=0></a></td>
+			<td width="100%" align="center"><b>&nbsp;#%DISPLAYWEEK%#&nbsp;<br><img
+				src="#%IMAGESDIR%#/spacer.gif" height=1 width=210></b></td>
+			<td width="0%"><a
+					href="#%ACTION%#?cmd=dvd_new&WHEN=#%NEXT%#"><img
+					src="#%IMAGESDIR%#/next.gif" align="absmiddle" alt="Следващата седмица"
+					border=0></a></td>
+			</tr></table>
+
+
+			</td>
+		</tr>
+		<tr><td>&nbsp;Филм<br><select class="a" name="FILM">#%FILM%#</select></td></tr>
+		<tr><td>Снимка за DVD премиерата&nbsp;<br><input type="file" class="a" size="40"  name="SNIMKA"></td></tr>
+	</TABLE>
+
+	</td></tr>
+	<tr><td align="right">
+		<input type="image" alt="Запиши DVD премиерата" src="#%IMAGESDIR%#/write.png"
+				onClick="javascript:this.form.elements['Add'].value=1;">
+		<a href="#%ACTION%#?cmd=dvd_new&WHEN=#%GO%#&WEEK=#%GO%#"><img src="#%IMAGESDIR%#/again.png" alt="Отказ" border=0></a>
+	</td></tr></table>
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+	<tr><td bgcolor=orange><img src="#%IMAGESDIR%#/spacer.gif" height=3></td></tr>
+	<tr><td bgcolor="#FFE184">
+	<table cellspacing=2 cellpadding=0 border=0><tr>
+		<td>&nbsp;DVD премиерите за седмицата в която е&nbsp;</td>
+		<td>
+<!--<SELECT NAME="WHEN" class="a">#%WHEN%#</SELECT>-->
+	<select class="a" name="Year1" onChange="refreshDays(this, '1')">
+	#%YEAR1%#
+	</select><select
+	class="a" name="Month1" onChange="refreshDays(this, '1')">
+	#%MONTH1%#
+	</select><select
+	class="a" name="Day1">
+	#%DAY1%#
+	</select>
+		</td>
+		<td valign="top"><input type="image" border=0 src="#%IMAGESDIR%#/view.png"
+		alt="Покажи DVD заглавията за седмицата" hspace=2
+		onClick="javascript:this.form.elements['Show'].value=1;"></td>
+	</tr></table>
+</td></tr>
+<tr><td bgcolor=orange><img src="#%IMAGESDIR%#/spacer.gif" height=2></td></tr></table>
+
+	<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 BORDER=0>
+	#%PREMS%#
+	<TR><TD COLSPAN=4 BGCOLOR=orange><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>
+	<TR><TD COLSPAN=4>
+		<a href="javascript:if (confirm('Да се изтрият ли маркираните DVD премиери?')){document.forms[0].elements['Delete'].value=1;document.forms[0].submit();}"><img
+		border=0 src="#%IMAGESDIR%#/delete.png" alt="Изтрий" vspace=2 hspace=2></a>
+		</TD></TR>
+	</TABLE>
+
+
+</form>
+</CENTER>

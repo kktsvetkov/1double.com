@@ -1,0 +1,4 @@
+Редактор <a href="#%ACTION%#?cmd=logout">#%LOGGED%#</a>&nbsp;<br>
+<a href="#%ACTION%#?cmd=menu"><img vspace=2
+src="#%IMAGESDIR%#/menu.png" align="absmiddle"
+alt="Работно меню" border="0"></a>&nbsp;

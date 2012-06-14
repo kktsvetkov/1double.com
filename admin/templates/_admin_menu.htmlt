@@ -1,0 +1,62 @@
+<CENTER>
+<TABLE WIDTH="100%" border=0>
+
+	<TR><TD WIDTH="20%"></TD>
+		<!--first column-->
+		<TD width="30%" valign="top">
+			<UL><b>Кино</b> #%DATE%#
+			        	<li><a href="#%ACTION%#?cmd=agenda">Програма</a>
+			        		<ul>
+			        		#%CITIES%#
+			        		</ul>
+			        	<li><a href="#%ACTION%#?cmd=city">Градове</a>
+			        	<li><a href="#%ACTION%#?cmd=cinema">Киносалони</a>
+			</UL>
+
+			<UL><b>Новини</b> #%DATE%#
+				
+				<li><a href="#%ACTION%#?cmd=articles">Статии</a>
+				<li><a href="#%ACTION%#?cmd=add_article">Добави  статия</a>
+			</UL>
+
+		</TD>
+		<!--second column-->
+		<TD WIDTH="30%" valign="top">
+			<UL><b>Видео</b> #%DATE%#
+				<li><a href="#%ACTION%#?cmd=video_new">Премиери</a>
+				<li><a href="#%ACTION%#?cmd=videodistr">Дистубутори</a>
+				
+			</UL>
+
+			<UL><b>DVD</b> #%DATE%#
+				<li><a href="#%ACTION%#?cmd=dvd_new">Премиери</a>
+				<li><a href="#%ACTION%#?cmd=dvddistr">Дистубутори</a>
+			</UL>
+
+			<UL><b>Класации</b> #%DATE%#
+				<li><a href="#%ACTION%#?cmd=charts">Видове класации</a>
+				<img src="#%IMAGESDIR%#/spacer.gif" vspace=7 align=top>
+				<ul>#%CHARTS%#</ul>
+			</UL>
+
+			<UL><b>Заглавия</b> #%DATE%#
+				<li><a href="#%ACTION%#?cmd=cinema_new">Премиери</a> 
+				<li><a href="#%ACTION%#?cmd=usa_new">Световни премиери</a>
+
+				<li><a href="#%ACTION%#?cmd=insertfilm">Добави филм</a>
+				<li><a href="#%ACTION%#?cmd=film">Филми</a>
+			</UL>
+			<UL><b>Редактор</b>
+				<li><a href="#%ACTION%#?cmd=password">Смяна на парола</a>
+				<li><a href="#%ACTION%#?cmd=backup">Архиви</a>
+				<!--<li><a href="#%ACTION%#?cmd=opt">Оптимизиране</a>-->
+				<br>
+				<li><a class="city" href="http://counter.search.bg/?sts,summary,,,,1double" target="_counter">Counter.search.bg</a>
+				<li><a class="city" href="http://extreme-dm.com/s/?tag=1double" target="_extreme">Extreme-dm.com</a>
+				<li><a class="city" href="http://click.hotlog.ru/?156478 " target="_hotlog">HotLog.ru</a>
+				<li><a class="city" href="http://u5291.48.spylog.com/cnt?cid=529148&f=3&p=0" target="_spylog">SpyLog.com</a>
+			</UL>
+		</TD>
+	<TD WIDTH="20%"></TD></TR>
+</TABLE>
+</CENTER>

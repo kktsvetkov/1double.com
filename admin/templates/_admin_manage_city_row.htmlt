@@ -1,0 +1,6 @@
+<TR BGCOLOR="#%COLOR%#">
+	<TD WIDTH="0%"><INPUT TYPE="CHECKBOX" NAME="city_#%CITYID%#"></TD>
+	<TD WIDTH="100%">#%NOM%#. <a href="#%ACTION%#?cmd=city&id=#%CITYID%#">#%CITY%#</a></TD>
+	<TD WIDTH="0%"><img  src="#%IMAGESDIR%#/ok#%ISDEL%#.png"></TD>
+</TR>
+<TR BGCOLOR=orange><TD COLSPAN=3><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>

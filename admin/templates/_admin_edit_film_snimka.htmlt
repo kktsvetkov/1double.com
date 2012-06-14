@@ -1,0 +1,4 @@
+		<a target="_#%IND%#" href="#%UPLOAD%##%URL%#?#%WIDTH%# #%HEIGHT%#">#%THUMB%#</a><input
+		type="image" border=0 alt="Изтрий снимка" src="#%IMAGESDIR%#/del.png" hspace=10 align="absmiddle"
+		onClick="javascript:if(confirm('Да се изтрие ли тази снимка ?')){this.form.elements['Delete'].value='#%IND%#';}else{return false}">
+		<br>
