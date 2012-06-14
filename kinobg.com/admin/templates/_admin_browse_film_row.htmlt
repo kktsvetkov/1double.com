@@ -1,0 +1,11 @@
+	<TR><TD><INPUT TYPE="checkbox" name="film_#%ID1%#"></TD>
+		<TD align="center">#%ID%#</TD>
+		<TD>&nbsp;<a href="#%ACTION%#?cmd=insertfilm&ID=#%ID1%#">#%TITLE%#</a></TD>
+		<TD><a class="film" href="#%ACTION%#?cmd=usa_new&FILM=#%ID1%#&WHEN=#%UW%#&WEEK=#%UW%#">#%USA%#</a></TD>
+		<TD><a class="film" href="#%ACTION%#?cmd=cinema_new&FILM=#%ID1%#&WHEN=#%CW%#&WEEK=#%CW%#">#%CINEMA%#</a></TD>
+		<TD><a class="film" href="#%ACTION%#?cmd=video_new&id=#%VID%#&WHEN=#%VW%#&WEEK=#%VW%#&FILMS=#%ID1%#" title="#%VLAST%#">#%VIDEO%#</a></TD>
+		<TD><a class="film" href="#%ACTION%#?cmd=dvd_new&id=#%DID%#&WHEN=#%DW%#&WEEK=#%DW%#&FILMS=#%ID1%#" title="#%DLAST%#">#%DVD%#</a></TD>
+		<TD>&nbsp;<a class="film" href="#%ACTION%#?cmd=film&id=#%ID1%#&Set=1">#%AGENDA%#</a></TD>
+		<TD>#%LAST%#</TD>
+	</TR>
+	<TR><TD COLSPAN="9" BGCOLOR="orange"><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>

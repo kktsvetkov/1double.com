@@ -1,0 +1,56 @@
+<script>
+<!--
+var error = 0;
+//-->
+</script>
+
+<CENTER>
+#%ERROR%#
+
+	<table cellpadding=3 cellspacing=0 border=0>
+<form method="POST" action="#%ACTION%#?cmd=insertfilm" ENCTYPE="multipart/form-data">
+<input type="hidden" name="ID" value="#%ID%#">
+<input type="hidden" name="Add" value="0">
+<input type="hidden" name="Photo" value="0">
+<input type="hidden" name="Delete" value="">
+
+	<tr><td colspan=2 bgcolor="orange">
+		<table cellspacing=0 cellpadding=0 border=0>
+			<tr height="18">
+				<td bgcolor="#FFE184"><b>&nbsp; Информация</b></td>
+				<td rowspan="3"><img src="#%IMAGESDIR%#/spacer.gif" width="3"></td>
+				<td bgcolor="#FFE184"><b>&nbsp; Снимки</b></td>
+			</tr>
+			<tr><td><img src="#%IMAGESDIR%#/spacer.gif"></td><td><img src="#%IMAGESDIR%#/spacer.gif"></td></tr>
+			<tr><td valign="top" bgcolor="white">
+				<table cellpadding=0 cellspacing=1 border=0>
+				<tr>
+					<td rowspan=9><img src="#%IMAGESDIR%#/spacer.gif" width="2"></td>
+					<td>Избери снимка <BR><input type="file" class="a" NAME="SNIMKA" size="22"><BR>
+					<INPUT TYPE="IMAGE" SRC="#%IMAGESDIR%#/add.png" border="0" vspace="3"
+						ALT="Добави снимка" onClick="javascript:this.form.elements['Photo'].value=1;this.form.elements['Add'].value=1;"></td>
+					<td rowspan=9><img src="#%IMAGESDIR%#/spacer.gif" width="2"></td>
+				</tr>
+
+				<tr><td>Заглавие<BR><input class="a" type="text" name="TITLE" size="45" value="#%TITLE%#"></td></tr>
+				<tr><td>Оригинално заглавие<BR><input class="a" type="text" name="ORIGINAL" size="45" value="#%ORIGINAL%#"></td></tr>
+				<tr><td>Жанр<BR><input class="a" type="text" name="GENRE" size="45" value="#%GENRE%#"></td></tr>
+				<tr><td>Официален сайт<BR><input class="a" type="text" name="URL" size="45" value="#%SITE%#"></td></tr>
+				<tr><td>Режисьор<BR><input class="a" type="text" name="DIRECTOR" size="45" value="#%DIRECTOR%#"></td></tr>
+				<tr><td>В ролите<BR><textarea class="a" name="ACTORS" cols="50" rows="3">#%ACTORS%#</textarea></td></tr>
+				<tr><td>Допълнитерна информация<BR><textarea class="a" name="ADDITIONAL" cols="50" rows="3">#%ADDITIONAL%#</textarea></td></tr>
+				<tr><td>Съдържание<BR><textarea class="a" name="INFO" cols="50" rows="10">#%INFO%#</textarea></td></tr>
+				</table>
+			<input align="right" type="image" hspace=2 vspace=2 src="#%IMAGESDIR%#/write.png"
+			alt="Запиши" onClick="javascript:this.form.elements['Add'].value=1;">
+			</td>
+			<td valign="top" bgcolor="white" align="center">
+				<!-- SPISAK NA SNIMITE --><img src="#%IMAGESDIR%#/spacer.gif" height=1 width=180><br>
+				#%SNIMKAS%#
+			</td></tr>
+		</table>
+	</td></tr>
+</form>
+</table>
+
+</CENTER>

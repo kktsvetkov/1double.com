@@ -1,0 +1,199 @@
+<script>
+<!--//
+function handleClear(where) {
+	where['String'].value = '';
+	where['Category'].selectedIndex = 0;
+	where['Group'].selectedIndex = 0;
+	
+	where['Year1'].selectedIndex = 0;
+	where['Month1'].selectedIndex = 0;
+	where['Day1'].selectedIndex = 0;
+
+	where['Year2'].selectedIndex = where['Year2'].options.length-1;
+	where['Month2'].selectedIndex = where['Month2'].options.length-1;
+	where['Day2'].selectedIndex = where['Day2'].options.length-1;
+	
+	where['Prem'].selectedIndex = 0;
+	}
+
+function Leap (Year)
+	{
+        	if (((Year % 4)==0) && ((Year % 100)!=0) || ((Year % 400)==0))
+		return 1
+        		else return 0;
+	}
+
+function Days (Month, Year)
+	{
+	if (Leap(Year)==1)
+                		L = 29;
+        		else L = 28;
+	var daysOfMonth = new Object();
+	daysOfMonth[1] = 31;
+	daysOfMonth[2] = L;
+	daysOfMonth[3] = 31;
+	daysOfMonth[4] = 30;
+	daysOfMonth[5] = 31;
+	daysOfMonth[6] = 30;
+	daysOfMonth[7] = 31;
+	daysOfMonth[8] = 31;
+	daysOfMonth[9] = 30;
+	daysOfMonth[10] = 31;
+	daysOfMonth[11] = 30;
+	daysOfMonth[12] = 31;
+
+	return daysOfMonth[Month];
+}
+
+function refreshDays(object, prefix)
+	{
+	iSelectedDayOption = object.form.elements['Day'+prefix].options.selectedIndex;
+	object.form.elements['Day'+prefix].options.length = 0;
+	Month = object.form.elements['Month'+prefix].options[object.form.elements['Month'+prefix].options.selectedIndex].value;
+	Year = object.form.elements['Year'+prefix].options[object.form.elements['Year'+prefix].options.selectedIndex].value;
+	var days = Days(Month, Year);
+
+	//opt = new Option();
+	//opt.text = '--Day--';
+	//opt.value = 0;
+	//object.form.elements['Day'+prefix].options[0] = opt;
+
+	for (i=1; i<=days; i++)
+		{
+		if (i<10)	value = '0' + String(i);
+			else value=String(i);
+		
+		opt = new Option();
+		opt.text = value;
+		opt.value = String(i);
+
+		if (i == iSelectedDayOption)
+      			opt.selected = true;
+			else opt.selected = false;
+  		object.form.elements['Day'+prefix].options[object.form.elements['Day'+prefix].length] = opt;
+		}
+
+	if (iSelectedDayOption > object.form.elements['Day'+prefix].options.length - 1)
+		iSelectedDayOption = 0;
+
+	object.form.elements['Day'+prefix].options.selectedIndex = iSelectedDayOption;
+	}
+-->
+</script>
+
+<CENTER>
+#%ERROR%#
+
+	<TABLE width="100%"  cellspacing=0 cellpadding=3 border=0>
+<form method="POST" action="#%ACTION%#?cmd=articles" name="a1">
+<input type="hidden" name="Delete" value=0>
+<input type="hidden" name="Add" value=0>
+<input type="hidden" name="Show" value=0>
+<input type="hidden" name="id" value="#%ID%#">
+<input type="hidden" name="offs" value="#%START%#">
+
+	<TR><TD ALIGN="center">
+		<table cellspacing=0 cellpadding=0 border=0><tr><td>
+			&nbsp;Намери&nbsp;<br>
+			<input type="text" name="string" value="#%STRING%#" size="60">
+		</td></tr><tr><td align="right">
+			<input type="image" border=0 src="#%IMAGESDIR%#/view.png" alt="Потърси в статиите"
+			vspace=2 onClick="javascript:this.form.elements['Show'].value=1;">
+			<a href="javascript:void(0);" onClick="javascript:document.forms['a1'].elements['string'].value='';">
+			<img alt="Изчисти" src="#%IMAGESDIR%#/again.png" border=0 vspace=2></a>
+		</td></tr></table>
+	</TD></TR>
+
+	<TR><TD ALIGN="center">
+		<table cellspacing=0 cellpadding=3 border=0><tr><td bgcolor=orange>
+			<table bgcolor=white border=0><tr>
+				<td>&nbsp;Статия&nbsp;<br>
+				<table width="100%" cellspacing=0 cellpadding=2 border=1 bgcolor="#FFE184" height=20><tr>
+				<td><img src="#%IMAGESDIR%#/spacer.gif" height=1
+					width=200><br>&nbsp;#%ARTICLE%#&nbsp;</td></tr></table>
+				</td>
+				<td>&nbsp;Покажи на<BR>
+					<select class="a" name="Year1" onChange="refreshDays(this, '1')">
+					#%YEAR1%#
+					</select><select
+					class="a" name="Month1" onChange="refreshDays(this, '1')">
+					#%MONTH1%#
+					</select><select
+					class="a" name="Day1">
+					#%DAY1%#
+					</select>
+				</td>
+				<td>Приоритет<br>
+				<input type="text" name="NO" value="#%NO%#" size="6"></td>
+			</tr></table>
+		</td>
+		<tr><td align="right"><input
+			type="image" alt="Търси" border="0" src="#%IMAGESDIR%#/write.png"
+			onClick="javascriipt:this.form.elements['Add'].value=1;">
+			<a href="#%ACTION%#?cmd=articles&">
+			<img alt="Изчисти" src="#%IMAGESDIR%#/again.png" border=0></a>
+		</td></tr></table>
+	</TD></TR>
+
+	<TR><TD bgcolor="orange">
+<!-- // -->
+<TABLE bgcolor=white width="100%" cellspacing=0 cellpadding=0 border=0>
+	<TR BGCOLOR="#FFE184"><TD  width="0%"><INPUT TYPE="checkbox" onClick="javascript:for(i=0;i<this.form.elements.length;i++)if(this.form.elements[i].type=='checkbox')this.form.elements[i].checked=this.checked;"></TD>
+			<TD width="0%" align="center"><a href="#%ACTION%#?cmd=articles&orderby=0&sort=#%SORT%#">[ID]</a></TD>
+			<TD width="65%">&nbsp;<a href="#%ACTION%#?cmd=articles&orderby=1&sort=#%SORT%#">[Заглавие]</a></TD>
+			<TD width="15%"><a href="#%ACTION%#?cmd=articles&orderby=2&sort=#%SORT%#">[Дата]</a></TD>
+			<TD width="20%"><a href="#%ACTION%#?cmd=articles&orderby=3&sort=#%SORT%#">[Обновен]</a></TD>
+	</TR>
+	#%ARTICLES%#
+	<TR><TD COLSPAN="9" BGCOLOR="orange"><img src="#%IMAGESDIR%#/spacer.gif" height=2></TD></TR>
+	<TR>
+		<TD  colspan=15>
+			<table cellpadding=0 cellspacing=0 border=0>
+				<tr>
+					<td width="80%">
+						<input type="image" src="#%IMAGESDIR%#/delete.png" alt="Изтрий статии" border=0 vspace=2 hspace=2
+onClick="javascript:if(confirm('Наистина ли желаете да изтриите\nизбраните статии?')){this.form.elements['Delete'].value=1;}else{return false;}"><a
+						href="#%ACTION%#?cmd=add_article"><img vspace=2 hspace=0
+						 alt="Добави статия" src="#%IMAGESDIR%#/add.png" border=0></a></td>
+</FORM>
+					<td width="20%" align="right">Заглавия на страница&nbsp;</td>
+<form action="#%ACTION%#">
+<input type="hidden" name="cmd" value="articles">
+<input type="hidden" name="sort" value="#%SORTED%#">
+<input type="hidden" name="orderby" value="#%ORDER%#">
+
+					<td width="0%"><INPUT TYPE="TEXT" SIZE="3" NAME="SearchPage" VALUE="#%PERPAGE%#" class="a"></td>
+					<td width="0%"><input type="image" src="#%IMAGESDIR%#/go.png" border=0 alt="Нагласи"
+onClick="javascript:if((this.form.elements['SearchPage'].value*1 != this.form.elements['SearchPage'].value)||(this.form.elements['SearchPage'].value<=0)){alert('Грешна начална страница.');return false;}"></td>
+</form>
+				</tr>
+			</table>
+		</TD>
+	</TR>
+	<TR><TD COLSPAN="9" BGCOLOR="orange"><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>
+	<TR>
+		<TD COLSPAN=15  BGCOLOR="white">
+			<table width="100%" cellpadding=0 cellspacing=0 border=0>
+				<tr>
+					<td width="80%">&nbsp;#%FIRST%# #%PREV%# Заглавия #%PAGE%# от общо #%TOTAL%# #%NEXT%# #%LAST%#</td>
+					<td align="right" width="20%">Прескочи на&nbsp;</td>
+<form action="#%ACTION%#">
+<input type="hidden" name="cmd" value="articles">
+<input type="hidden" name="sort" value="#%SORTED%#">
+<input type="hidden" name="orderby" value="#%ORDER%#">
+					<td width="0%"><INPUT TYPE="TEXT" SIZE="3" NAME="offs" VALUE="0" class="a"></td>
+					<td width="0%"><input type="image" src="#%IMAGESDIR%#/go.png" border=0 alt="Давай"
+onClick="javascript:if((this.form.elements['offs'].value*1 != this.form.elements['offs'].value)||(this.form.elements['offs'].value<0)||(this.form.elements['offs'].value>=#%TOTAL%#)){alert('Грешна начална страница.');return false;}">
+					</td>
+				</tr>
+</form>
+			</table>
+		</TD>
+	</TR>
+</TABLE>
+<!-- // -->
+		</TD>
+	</TR>
+</FORM>
+</TABLE>
+</CENTER>

@@ -1,0 +1,7 @@
+			<table cellspacing=0 cellpadding=0 border=0 width="100%"><tr>
+			<td>&nbsp;Позиция<br><input type="text" class="a" name="NO" value="#%NO%#" size=4></td>
+			<td>&nbsp;Седмици<br><input type="text" class="a" name="WEEKS" value="#%WEEKS%#" size=10></td>
+			<td>&nbsp;Екрани<br><input type="text" class="a" name="SCREENS" value="#%SCREENS%#" size=10></td>
+			<td>&nbsp;Приход<br><input type="text" class="a" name="BO" value="#%BO%#" size=10></td>
+			<td>&nbsp;Общо<br><input type="text" class="a" name="CBO" value="#%CBO%#" size=10></td>
+			</tr></table>

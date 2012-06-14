@@ -1,0 +1,4 @@
+<table cellspacing=0 cellpadding=0 border=0><tr>
+<td>&nbsp;Позиция<br>&nbsp;<input type="text" class="a" name="NO" value="#%NO%#" size=4></td>
+<td>&nbsp;Седмици<br>&nbsp;<input type="text" class="a" name="WEEKS" value="#%WEEKS%#" size=10></td>
+</tr></table>

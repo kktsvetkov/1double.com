@@ -1,0 +1,10 @@
+<TR BGCOLOR="white">
+	<TD WIDTH="0%"><INPUT TYPE="CHECKBOX" NAME="chart_#%CHARTID%#"></TD>
+	<TD WIDTH="85%"><a href="#%ACTION%#?cmd=manage_chart&PLACES=#%CHARTID%#"><img
+		border=0 src="#%IMAGESDIR%#/show.png" align="absmiddle"
+		alt="Покажи #%CHART%#"></a><a 
+		href="#%ACTION%#?cmd=charts&id=#%CHARTID%#">#%CHART%#</a> #%TIP%# </TD>
+	<TD WIDTH="15%">#%NOM%# позиции</TD>
+	<TD WIDTH="0%"><img  src="#%IMAGESDIR%#/ok#%ISDEL%#.png"></TD>
+</TR>
+<TR BGCOLOR=orange><TD COLSPAN="4"><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>

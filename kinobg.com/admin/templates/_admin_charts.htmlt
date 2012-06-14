@@ -1,0 +1,248 @@
+<script>
+<!--//
+function Leap (Year)
+	{
+        	if (((Year % 4)==0) && ((Year % 100)!=0) || ((Year % 400)==0))
+		return 1
+        		else return 0;
+	}
+
+function Days (Month, Year)
+	{
+	if (Leap(Year)==1)
+                		L = 29;
+        		else L = 28;
+	var daysOfMonth = new Object();
+	daysOfMonth[1] = 31;
+	daysOfMonth[2] = L;
+	daysOfMonth[3] = 31;
+	daysOfMonth[4] = 30;
+	daysOfMonth[5] = 31;
+	daysOfMonth[6] = 30;
+	daysOfMonth[7] = 31;
+	daysOfMonth[8] = 31;
+	daysOfMonth[9] = 30;
+	daysOfMonth[10] = 31;
+	daysOfMonth[11] = 30;
+	daysOfMonth[12] = 31;
+
+	return daysOfMonth[Month];
+}
+
+function refreshDays(object, prefix)
+	{
+	iSelectedDayOption = object.form.elements['Day'+prefix].options.selectedIndex;
+	object.form.elements['Day'+prefix].options.length = 0;
+	Month = object.form.elements['Month'+prefix].options[object.form.elements['Month'+prefix].options.selectedIndex].value;
+	Year = object.form.elements['Year'+prefix].options[object.form.elements['Year'+prefix].options.selectedIndex].value;
+	var days = Days(Month, Year);
+
+	//opt = new Option();
+	//opt.text = '--Day--';
+	//opt.value = 0;
+	//object.form.elements['Day'+prefix].options[0] = opt;
+
+	for (i=1; i<=days; i++)
+		{
+		if (i<10)	value = '0' + String(i);
+			else value=String(i);
+		
+		opt = new Option();
+		opt.text = value;
+		opt.value = String(i);
+
+		if (i == iSelectedDayOption)
+      			opt.selected = true;
+			else opt.selected = false;
+  		object.form.elements['Day'+prefix].options[object.form.elements['Day'+prefix].length] = opt;
+		}
+
+	if (iSelectedDayOption > object.form.elements['Day'+prefix].options.length - 1)
+		iSelectedDayOption = 0;
+
+	object.form.elements['Day'+prefix].options.selectedIndex = iSelectedDayOption;
+	}
+-->
+</script>
+<CENTER>
+
+#%ERROR%#
+
+	<table cellspacing=0 cellpadding= 3 border=0><tr><td></td></tr><tr><td bgcolor="orange">
+
+<form method="POST" action="#%ACTION%#?cmd=manage_chart">
+<input type="hidden" name="id" value="#%ID%#">
+<input type="hidden" name="Delete" value=0>
+<input type="hidden" name="Add" value=0>
+<input type="hidden" name="Show" value=0>
+<input type="hidden" name="WEEK" value="#%WEEK%#">
+<!--<input type="hidden" name="chartid" value="#%CHARTS%#">-->
+
+	<TABLE cellpadding=0 cellspacing=2 bgcolor="white"  border=0>
+		<tr><td>
+			<table cellspacing=0 cellpadding=0 border=0><tr>
+			<td>&nbsp;Kласация<br>
+<!--<select class="a" name="chartid">#%CHARTS%#</select>-->
+				<table cellspacing=0 border=1 width="100%"><tr>
+				<td><b>&nbsp;#%CHARTTITLE%#&nbsp;</b></td>
+				</tr></table>
+			</td>
+			<td><img src="#%IMAGESDIR%#/spacer.gif" width=5 height=1></td>
+			<td>&nbsp;Седмица<br>
+<!--<select class="a" name="WEEK">#%WEEK%#</select>-->
+				<table cellspacing=0 border=0 cellpadding=0 bgcolor="#FFE184" width="100%"><tr>
+				<td width="0%"><a href="#%ACTION%#?cmd=manage_chart&WHEN=#%PREV%#&PLACES=#%CHARTS%#"><img
+					src="#%IMAGESDIR%#/prev.gif" align="absmiddle" alt="Предната седмица"
+					border=0></a></td>
+				<td width="100%" align="center"><b>&nbsp;#%DISPLAYWEEK%#&nbsp;</b></td>
+				<td width="0%"><a
+					href="#%ACTION%#?cmd=manage_chart&WHEN=#%NEXT%#&PLACES=#%CHARTS%#"><img
+					src="#%IMAGESDIR%#/next.gif" align="absmiddle" alt="Следващата седмица"
+					border=0></a></td>
+				</tr></table>			</td>
+			</tr></table>
+			#%DISPLAYCHART%#
+			
+		</td></tr>
+		<tr><td>
+			<table cellpadding=0 cellspacing=0 border=0>
+			<tr>
+				<td align="right" valign="top"><input type="radio" name="TYPE" value="list" #%TYPELIST%#></td>
+				<td>Изберете филм</td>
+				<td><select class="a" name="FILMS"
+					onChange="for(i=0;i<this.form.elements.length;i++)if((this.form.elements[i].type=='radio')&&(this.form.elements[i].value=='list'))this.form.elements[i].checked=true;">
+						<option value=0>Изберете заглавие от списъка с въведените филми
+						#%FILM%#</select></td>
+			</tr>
+			<tr><td></td><td></td>
+				<td valign=top><input
+					style="width:100%"
+					type=input
+					onClick="for(i=0;i<this.form.elements.length;i++)if((this.form.elements[i].type=='radio')&&(this.form.elements[i].value=='list'))this.form.elements[i].checked=true;"
+					ONKEYUP="autoComplete(this,this.form.FILMS,'text',true)"><br><br>
+<script>
+// ===================================================================
+// Author: Matt Kruse <matt@mattkruse.com>
+// WWW: http://www.mattkruse.com/
+//
+// NOTICE: You may use this code for any purpose, commercial or
+// private, without any further permission from the author. You may
+// remove this notice from your final code if you wish, however it is
+// appreciated by the author if at least my web site address is kept.
+//
+// You may *NOT* re-distribute this code in any way except through its
+// use. That means, you can include it in your product, or your web
+// site, or any other form where the code is actually being used. You
+// may not put the plain javascript up on your site for download or
+// include it in your javascript libraries for download. 
+// If you wish to share this code with others, please just point them
+// to the URL instead.
+// Please DO NOT link directly to my .js files from your site. Copy
+// the files to your server and use them there. Thank you.
+// ===================================================================
+
+// -------------------------------------------------------------------
+// autoComplete (text_input, select_input, ["text"|"value"], [true|false])
+//   Use this function when you have a SELECT box of values and a text
+//   input box with a fill-in value. Often, onChange of the SELECT box
+//   will fill in the selected value into the text input (working like
+//   a Windows combo box). Using this function, typing into the text
+//   box will auto-select the best match in the SELECT box and do
+//   auto-complete in supported browsers.
+//   Arguments:
+//      field = text input field object
+//      select = select list object containing valid values
+//      property = either "text" or "value". This chooses which of the
+//                 SELECT properties gets filled into the text box -
+//                 the 'value' or 'text' of the selected option
+//      forcematch = true or false. Set to 'true' to not allow any text
+//                 in the text box that does not match an option. Only
+//                 supported in IE (possible future Netscape).
+// -------------------------------------------------------------------
+function autoComplete (field, select, property, forcematch) {
+	var found = false;
+	for (var i = 0; i < select.options.length; i++) {
+	if (select.options[i][property].toUpperCase().indexOf(field.value.toUpperCase()) == 0) {
+		found=true; break;
+		}
+	}
+	if (found) { select.selectedIndex = i; }
+	else { select.selectedIndex = -1; }
+	if (field.createTextRange) {
+		if (forcematch && !found) {
+			field.value=field.value.substring(0,field.value.length-1); 
+			return;
+			}
+		var cursorKeys ="8;46;37;38;39;40;33;34;35;36;45;";
+		if (cursorKeys.indexOf(event.keyCode+";") == -1) {
+			var r1 = field.createTextRange();
+			var oldValue = r1.text;
+			var newValue = found ? select.options[i][property] : oldValue;
+			if (newValue != field.value) {
+				field.value = newValue;
+				var rNew = field.createTextRange();
+				rNew.moveStart('character', oldValue.length) ;
+				rNew.select();
+				}
+			}
+		}
+	}
+// -------------------------------------------------------------------
+</script>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="right"><input type="radio" name="TYPE" value="raw" #%TYPERAW%#></td>
+				<td>Въведете заглавие&nbsp;</td>
+				<td><input class="a" name="FILM" value="#%FILM2%#" size="51"
+					onClick = "javascript:for(i=0;i<this.form.elements.length;i++)if((this.form.elements[i].type=='radio')&&(this.form.elements[i].value=='raw'))this.form.elements[i].checked=true;">
+				</td>
+			</tr></table>
+		</td></tr>
+	</TABLE>
+
+	</td></tr>
+	<tr><td align="right">
+		<input type="image" alt="Запиши заглавието към програмата" src="#%IMAGESDIR%#/write.png"
+				onClick="javascript:this.form.elements['Add'].value=1;">
+		<a href="#%ACTION%#?cmd=manage_chart&WEEK=#%GO2%#&PLACES=#%CHARTS%#"><img src="#%IMAGESDIR%#/again.png" alt="Отказ" border=0></a>
+	</td></tr></table>
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+	<tr><td bgcolor=orange><img src="#%IMAGESDIR%#/spacer.gif" height=3></td></tr>
+	<tr><td bgcolor="#FFE184">
+	<table cellspacing=2 cellpadding=0 border=0><tr>
+		<td>&nbsp;Покажи&nbsp;</td>
+		<td><SELECT NAME="PLACES" class="a">#%PLACES%#</SELECT></td>
+		<td>&nbsp;за седмицата в която е&nbsp;</td>
+		<td>
+<!--<SELECT NAME="WHEN" class="a">#%WHEN%#</SELECT>-->
+			<select class="a" name="Year1" onChange="refreshDays(this, '1')">
+			#%YEAR1%#
+			</select><select
+			class="a" name="Month1" onChange="refreshDays(this, '1')">
+			#%MONTH1%#
+			</select><select
+			class="a" name="Day1">
+			#%DAY1%#
+			</select>
+		</td>
+		<td valign="top"><input type="image" border=0 src="#%IMAGESDIR%#/view.png" alt="Покажи заглавията за кино седмицата"
+			onClick="javascript:this.form.elements['Show'].value=1;">
+		</td>
+	</tr></table>
+</td></tr>
+<tr><td bgcolor=orange><img src="#%IMAGESDIR%#/spacer.gif" height=2></td></tr></table>
+
+	<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 BORDER=0>
+	#%SHOWCHARTS%#
+	<TR><TD COLSPAN=6 BGCOLOR=orange><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR>
+	<TR><TD COLSPAN=6>
+		<a href="javascript:if (confirm('Да се изтрият ли маркираните заглавия от класацията?')){document.forms[0].elements['Delete'].value=1;document.forms[0].submit();}"><img
+		border=0 src="#%IMAGESDIR%#/delete.png" alt="Изтрий" vspace=2 hspace=2></a>
+		</TD></TR>
+	</TABLE>
+
+
+</form>
+</CENTER>

@@ -1,0 +1,7 @@
+<TR><TD COLSPAN=5 BGCOLOR=orange><img src="#%IMAGESDIR%#/spacer.gif"></TD></TR><TR bgcolor="white">
+	<TD><input type="checkbox" name="article_#%CHECK%#"></TD>
+	<TD align="center">&nbsp;#%ID2%#&nbsp;</TD>
+	<TD>&nbsp;<a href="#%ACTION%#?cmd=add_article&ID=#%CHECK%#">#%TITLE%#</a></TD>
+	<TD><a class="film" href="#%ACTION%#?cmd=articles&id=#%CHECK%#&offs=#%START%#&orderby=#%ORDER%#&sort=#%SORTED%#">[#%SEDMICA%#]</a> .#%NOM%#</TD>
+	<TD>#%LAST%#&nbsp;</TD>
+</TR>

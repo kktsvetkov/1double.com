@@ -1,0 +1,6 @@
+<tr>
+	<td width="0%"><input type="checkbox" name="bck_#%CHECK%#"></td>
+	<td width="100%" ><a href="#%WHERE%#">#%NAME%#</a> filesize #%SIZE%#</td>
+</tr>
+<tr><td colspan="2" bgcolor="#FFE184" height="19">#%COMMENTS%#</td></tr>
+<tr><td colspan="2" bgcolor="orange"><img src="#%IMAGESDIR%#/spacer.gif"></td></tr>

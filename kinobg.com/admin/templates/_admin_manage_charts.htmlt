@@ -1,0 +1,36 @@
+<CENTER>
+#%ERROR%#
+
+	<img src="#%IMAGESDIR%#/spacer.gif" height="3"><table cellpadding=3 cellspacing=0 border=0>
+<form method="POST" action="#%ACTION%#?cmd=charts&id=#%ID%#">
+<input type="hidden" name="Delete" value=0>
+<input type="hidden" name="Add" value=0>
+
+	<tr>
+		<td>Заглавие на класацията<BR><input class="a" type="text" name="ADDCHART" size="40" value="#%ADDCHART%#"></td>
+		<td>Позиции<BR><input class="a" type="text" name="NO" size="4" value="#%NO%#"></td>
+		<td>Тип<BR><select class="a" name="TYPE">
+			<option value="kino"	#%TYPEKINO%#>	кино
+			<option value="videodvd"	#%TYPEVIDEODVD%#>	видео &amp; dvd
+			</select></td>
+	</tr>
+	<tr><td colspan="3" align="right"><input type="image" alt="Запиши град" src="#%IMAGESDIR%#/write.png"
+		onClick="javascript:this.form.elements['Add'].value=1;"> <a href="#%ACTION%#?cmd=charts"><img
+		src="#%IMAGESDIR%#/again.png" border=0 alt="Изчисти"></a></td></tr>
+
+	<tr><td colspan="3" bgcolor="orange">
+		<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 BORDER=0>
+
+			<TR HEIGHT="18" bgcolor="#FFE184"><TD COLSPAN="4">&nbsp;<B>Класации</B></TD></TR>
+			<TR><TD align="CENTER" COLSPAN="4">#%NONE%#</TD></TR>
+		#%CHARTS%#
+		</TABLE>
+	</td></tr>
+
+	<tr><td colspan="3" align="right"><a
+		href="javascript:if (confirm('Да се изтрият ли маркираните класации?')){document.forms[0].elements['Delete'].value=1;document.forms[0].submit();}"><img
+		border=0 src="#%IMAGESDIR%#/delete.png" alt="Изтрий"></a>
+	</td></tr>
+</form>
+</table>
+</CENTER>

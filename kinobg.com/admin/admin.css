@@ -1,0 +1,19 @@
+A {text-decoration:none;color:black;font-weight:bold;font-family:Tahoma,Verdana;font-size:11px}
+A:hover {color: #FF8000}
+
+A.city {text-decoration:none;color:black;font-weight:normal;font-family:Tahoma,Verdana;font-size:11px}
+A.cinema {text-decoration:none;color:#888888;font-weight:normal;font-family:Tahoma,Verdana;font-size:11px}
+
+A.film {text-decoration:underline;color:black;font-weight:normal;font-family:Tahoma,Verdana;font-size:11px}
+
+td {color:black;font-family:Tahoma,Verdana;font-size:11px}
+td.error {text-align:center;letter-spacing:2px;color:white;font-weight:bolder;font-family:Tahoma,Verdana;font-size:11px; line-height:13pt;}
+td.orange {color:#FF7F00;font-family:Tahoma,Verdana;font-size:11px;}
+
+input.a {color:black;font-family:Tahoma,Verdana;font-size:11px;font-weight:bold;background-color:#FFE184}
+select.a {margin-left:2px;color:black;font-family:Tahoma,Verdana;font-size:11px;font-weight:bold}
+textarea.a {color:black;font-family:Tahoma,Verdana;font-size:11px;font-weight:bold;background-color:#FFE184}
+
+input.b {color:black;font-family:Tahoma,Verdana;font-size:11px;font-weight:bold;background-color:#white}
+
+ul {color:orange}
