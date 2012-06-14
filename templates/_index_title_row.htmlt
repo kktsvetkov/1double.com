@@ -1,0 +1,6 @@
+<TABLE cellpadding=0 cellspacing=0 border=0><TR>
+<TD width="0%" valign="top">#%POKAJI%#</TD>
+<TD width="100%" valign="top"><li><a href="#%ACTION%#?cmd=film&id=#%TITLEID%#">#%FILM_TITLE%#</a><br>
+<font color="#666666">c #%ACTORS_TITLE%#</font><br>
+#%TITLES%#<br><br></TD>
+</TR></TABLE>

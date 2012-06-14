@@ -1,0 +1,6 @@
+<img src="#%IMAGESDIR%#/spacer.gif" align="left" height="16" width="10"><img
+	src="#%IMAGESDIR%#/kletka.gif" align="absmiddle" vspace=3><a
+	href="#%ACTION%#?cmd=cinema&id=#%CINEMAID%#">#%CINEMA%#</a>
+	<br>
+	<font color="#666666">#%KOGA%#</font>
+	<br>

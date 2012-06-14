@@ -1,0 +1,2 @@
+<a href="#%URL%#" rel="lightbox" onclick="javascript:photo('#%URL%#',#%WIDTH%#,#%HEIGHT%#); return false;"><img
+	border=0 src="#%TURL%#" width="#%TWIDTH%#" height="#%THEIGHT%#" align="#%ALIGN%#" alt="#%ALT%#"></a>

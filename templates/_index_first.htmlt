@@ -1,0 +1,5 @@
+<tr><td><a href="#%ACTION%#"><img
+	 src="#%IMAGESDIR%#/_front.gif"
+	 alt="Първа страница" border=0></a></td></tr>
+<tr><td><ul>#%FIRST1%#</ul></td></tr>
+<tr><td><img src="#%IMAGESDIR%#/spacer.gif" width=1 height=3></td></tr>

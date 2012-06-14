@@ -1,0 +1,17 @@
+	<table border=0 cellspacing=0 cellpadding=0 width="100%">
+	<tr>
+		<td background="#%IMAGESDIR%#/_bg.png" colspan=2><img border=0
+		src="#%IMAGESDIR%#/_akt.gif"
+		alt="Втори дубъл"></td>
+	</tr>
+
+	<tr><td>#%ARTICLES%#</td></tr>
+	
+	<tr><TD><img src="#%IMAGESDIR%#/spacer.gif" width=1 height=10></TD></tr>
+	</table>
+
+
+	#%PREMIERI%#
+	
+	#%USAPREM%#
+

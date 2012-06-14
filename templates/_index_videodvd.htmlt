@@ -1,0 +1,27 @@
+<table width="100%" cellpadding=0 cellspacing=0 border=0 background="#%IMAGESDIR%#/_.gif"><tr>
+	<td><img src="#%IMAGESDIR%#/spacer.gif" height=1 width=21></td>
+	<td class="j">
+	<img src="#%THUMB%#" width="#%VWIDTH%#" hspace=5
+		height="#%VHEIGHT%#" alt="#%TITLE%#" align="left"><img
+		align="absmiddle" src="#%IMAGESDIR%#/kletka.gif" vspace=3><a name="s#%ID%#"><b>#%TITLE%#</b></a><br>
+			#%ORIGINAL%#
+			#%GENRE%#
+			<BR>
+			#%DIRECTOR%#
+			#%ACTORS%#
+			#%ADDITIONAL%#
+
+			<BR>#%KARTINKI%#
+			
+			#%CAPTION%#<br>
+			
+			<TABLE cellpadding="0" cellspacing="0" border=0><TR>
+			<TD width="0%" valign="top"><img src="#%IMAGESDIR%#/spacer.gif" height="1"
+				width="100"><br><font color="gray">#%DISTR%#</font></TD>
+				<TD width="100%" align="right">#%KARTINKI2%#</TD>
+			</TR></TABLE>
+
+		<img src="#%IMAGESDIR%#/spacer.gif" width=1 height=10>
+	</td>
+<td><img src="#%IMAGESDIR%#/spacer.gif" height=1 width=35></td>
+</tr></table>

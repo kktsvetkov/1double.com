@@ -1,0 +1,18 @@
+<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr>
+<td background="#%IMAGESDIR%#/_bg.png" colspan=2><img src="#%IMAGESDIR%#/_prog.gif"
+alt="Програмата на кината в #%TOWN%#"></td></tr><tr><td>
+
+<table border=0 width="100%" cellpadding=0 cellspacing=0>
+	<tr><td valign="bottom"><img src="#%IMAGESDIR%#/spacer.gif" height=1 width=18></td>
+	<td valign="top" width="40%">
+		<img src="#%IMAGESDIR%#/pd_.gif" align="absmiddle" vspace=5>Къде може да гледате кино в #%TOWN%#
+		#%AGENDA0%#
+	</td><td valign="top"  width="60%">
+		<img src="#%IMAGESDIR%#/pd_.gif" align="absmiddle" vspace=5>Какво може да гледате в  #%TOWN%#
+		#%AGENDA1%#
+	</td></tr>
+</table><img src="#%IMAGESDIR%#/spacer.gif" height=15 width=1>
+<div align="right">#%OLD%#</div>
+<img src="#%IMAGESDIR%#/spacer.gif" width=1 height=10>
+</td>
+</tr></table>

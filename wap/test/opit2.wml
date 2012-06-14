@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+
+<wml>
+    <card title="CeeTeeWAP Home">
+
+    <p align = "left">
+
+	Welcome to CeeTeeWAP!<br/>
+	Updated: 24-01-2005<br/>
+	[Made for SonyEricsson K700i and T610]<br/><br/>
+
+	<a href="info.wml">Info on K700i</a> <br/>
+	<a href="downloads.wml">Downloads</a> <br/>
+	<a href="links.wml">Links</a> <br/> <br/><br/>
+	
+	Copyright 2004-2005  <br/>
+	CeeTeeWAP® <br/>
+	CeeTee Inc.  <br/>
+	India. <br/>
+        chetanthaker@gmail.com
+
+      </p>
+    </card>
+</wml>
+
+

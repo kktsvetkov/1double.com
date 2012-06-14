@@ -1,0 +1,26 @@
+<div style="margin-left: 3em;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3813963842297642";
+google_ad_width = 468;
+google_ad_height = 15;
+google_ad_format = "468x15_0ads_al_s";
+//2007-08-11: kino.bg, kino.bg: Статия
+google_ad_channel = "6905490305+1005988049";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "E1771E";
+google_color_text = "000000";
+google_color_url = "B47B10";
+//-->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br></div>
+
+<table background="#%IMAGESDIR%#/_nav.gif" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+	<td><a href="#%ACTION%#?cmd=#%CMD%#&page=#%WHERE1%#"><img border="0"
+		align="absmiddle" src="#%IMAGESDIR%#/_prev#%IMG1%#.gif" ></a></td>
+	<td align="right"><a href="#%ACTION%#?cmd=#%CMD%#&page=#%WHERE2%#"><img border="0"
+		align="absmiddle" src="#%IMAGESDIR%#/_next#%IMG2%#.gif" ></a></td>
+</tr></table>

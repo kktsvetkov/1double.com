@@ -1,0 +1,5 @@
+<table border=0 cellspacing=0 cellpadding=0 width="100%">
+<tr><td><img border=0 src="#%IMAGESDIR%#/#%PIC_2%#" alt="#%ALT_2%#"></td></tr>
+<tr><td><img src="#%IMAGESDIR%#/spacer.gif" width=1 height=3>#%VALUE_2%#</td></tr>
+<tr><TD><img src="#%IMAGESDIR%#/spacer.gif" width=1 height=10></TD></tr>
+</table>
