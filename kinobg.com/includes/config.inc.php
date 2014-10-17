@@ -10,7 +10,7 @@
 // Debug version?
  define ("DEBUG", "1");
  define ("AUDIT", "1");
- 
+
 // admin settings
 $ADMIN_SETTINGS['MIN_USERNAME_LEN'] = 4;
 $ADMIN_SETTINGS['MAX_USERNAME_LEN'] = 12;
@@ -74,4 +74,3 @@ $tbl_1d_videodvd_charts = 'tbl_videodvd_charts';
 // Log file path:
 $debugLogFile = "logs/debug.log";
 $adminLogFile = "logs/unauthorized.access";
-?>

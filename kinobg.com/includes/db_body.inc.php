@@ -6,10 +6,10 @@
 // http://www.dreamwaretech.com
 // Definitions of PHP functions for mysql for use with the database
 //  independent shell.
-// Last Revision: 2001/07/04 20:27 by E. 
+// Last Revision: 2001/07/04 20:27 by E.
 //
 // Exported Functions:
-// 
+//
 // db_connect($host, $username, $password);
 // db_close();
 // db_pconnect($host, $username, $password);
@@ -25,10 +25,10 @@
 // db_query($statement, $connection);
 // db_result($result, $row,$fld);
 // db_select_db($db, $connection);
-// 
+//
 // functions act as the according functions for mysql access through PHP, i.e.
 // db_connect($host, $username, $password); = mysql_connect($host, $username, $password);
-// 
+//
 
 
 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -232,6 +232,3 @@ function split_sql_file(&$ret, $sql, $release = MYSQL_INT_VERSION) {
 
 	return TRUE;
 }
-
-
-?>

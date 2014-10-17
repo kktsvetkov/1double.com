@@ -19,4 +19,3 @@ if (strstr($U[host], 'google.com')) {
 		fclose($fp);
 		}
 	}
-?>

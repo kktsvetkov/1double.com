@@ -39,7 +39,7 @@
 			ON $tbl_1d_cities.ID = $tbl_1d_cinemas.CityID
 		LEFT JOIN $tbl_1d_agenda
 			ON $tbl_1d_cinemas.ID = $tbl_1d_agenda.CinemaID
-			
+
 		WHERE	$tbl_1d_agenda.CinemaID IS NOT NULL
 				AND ($tbl_1d_agenda.tsWhen <= (".week()."+604799))
 				AND $tbl_1d_cities.Active = 'yes'
@@ -182,13 +182,13 @@
 	$query = "SELECT	$tbl_1d_films.ID,
 			$tbl_1d_films.OriginalTitle,
 			$tbl_1d_films.tsUsaPremiere
-			
+
 		FROM $tbl_1d_films
-		
+
 		WHERE 	$tbl_1d_films.tsUsaPremiere <= (".week()."+604799)
 				AND $tbl_1d_films.OriginalTitle != ''
 				AND $tbl_1d_films.tsUSaPremiere != ''
-		
+
 		ORDER BY	($tbl_1d_films.tsUsaPremiere >= ".week().") DESC,
 			$tbl_1d_films.tsUsaPremiere DESC,
 			$tbl_1d_films.OriginalTitle ";
@@ -209,7 +209,7 @@
 	//charts
 	$query = "SELECT	$tbl_1d_charts.ID,
 			$tbl_1d_charts.Title
-			
+
 		FROM $tbl_1d_charts
 		LEFT JOIN $tbl_1d_kino_charts
 			ON $tbl_1d_kino_charts.ChartID = $tbl_1d_charts.ID
@@ -217,10 +217,10 @@
 		LEFT JOIN $tbl_1d_videodvd_charts
 			ON $tbl_1d_videodvd_charts.ChartID = $tbl_1d_charts.ID
 				AND $tbl_1d_charts.Type = 'videodvd'
-		
+
 		WHERE ($tbl_1d_kino_charts.ID IS NOT NULL)
 			OR ($tbl_1d_videodvd_charts.ID IS NOT NULL)
-		
+
 		GROUP BY $tbl_1d_charts.ID
 		ORDER BY	$tbl_1d_charts.Type ";
 
@@ -233,4 +233,3 @@
 		$SUBS['CHARTS'] .= fileParse('_index_kino.htmlt');
 		}
 
-?>

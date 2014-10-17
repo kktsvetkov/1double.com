@@ -6,7 +6,7 @@
 //
 
 class Cache {
-	
+
 	var $prefix = 'cache_';
 	var $dir = './cache2';
 	var $expire = 3600;
@@ -19,7 +19,7 @@ class Cache {
 function Cache() {
 
 	clearstatcache();
-	
+
 	if (func_num_args()>0) {
 		$this->prefix = func_get_arg(0);
 		}
@@ -37,9 +37,9 @@ function Cache() {
 		} else {
 		$this->OK = is_writable($this->dir) && is_readable($this->dir);
 		}
-	
+
 	$this->OK &= !preg_match('~google|bot~', $_SERVER['HTTP_USER_AGENT']);
-	
+
 	//start caching
 	if ($this->OK) {
 		$this->Start();
@@ -48,7 +48,7 @@ function Cache() {
 
 //funstion start
 function Start() {
-	
+
 	//no cache for post
 	if (strToUpper($_SERVER['REQUEST_METHOD'])=='POST') {
 		return;
@@ -66,7 +66,7 @@ function Start() {
 		.rawUrlEncode($_SERVER['SCRIPT_FILENAME'])
 		.rawUrlEncode($_SERVER['QUERY_STRING'])
 		.'.hTm';
-	
+
 	//check for cache
 	if (!file_exists($this->dir . '/' . $this->name)) {
 		ob_start();
@@ -99,13 +99,13 @@ function End() {
 	if (!($this->OK && $this->name && $length)) {
 		return;
 		}
-	
+
 	//write cache
 	if ($fp = @fopen($this->dir . '/' . $this->name,'w+')) {
 		fwrite($fp, $cache);
 		fclose($fp);
 		}
-	
+
 	//validate cache
 	if ($length != filesize($this->dir . '/' . $this->name)) {
 		//@unlink($this->dir . '/' . $this->name);
@@ -117,11 +117,11 @@ function Force() {
 	if (!file_exists($this->dir . '/' . $this->name)) {
 
 		if ($cache_dir = opendir($this->dir)) {
-			while (false !== ($file = readdir($cache_dir))) { 
+			while (false !== ($file = readdir($cache_dir))) {
 				if (!ereg('^'.$this->prefix, $file)) continue;
 				break;
 				}
-			closedir($cache_dir); 
+			closedir($cache_dir);
 			}
 		$forced_cache = $file;
 		} else {
@@ -133,4 +133,3 @@ function Force() {
 	die("\n<!--end of cached version-->");
 	}
  }
-?>
