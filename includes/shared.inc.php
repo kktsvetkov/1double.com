@@ -13,7 +13,7 @@ include('./includes/cache.inc.php');
 if (get_magic_quotes_gpc())
  	set_magic_quotes_runtime(0);
 $magic_quotes_gpc = get_magic_quotes_gpc();
-  
+
 // function init() // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  function init() {
 	global $HTTP_POST_VARS, $HTTP_GET_VARS, $PARAM;
@@ -31,7 +31,7 @@ $magic_quotes_gpc = get_magic_quotes_gpc();
 			{
 			// fopen failed, set program status:
 			setLogAndStatus('','',$debugLogFile,'init()','DEBUG_LOG_OPEN');
-			
+
 			////---- [Mrasnika's] Edition Aug-01-2008
 			//return 0;
 			$Cache->force();
@@ -76,7 +76,7 @@ $magic_quotes_gpc = get_magic_quotes_gpc();
 		$currentDate = date("Y/m/d h:i:s");
 		$logError = "$currentDate\t$errcode\t$errmessage\t$funcname\t$query\t$ppoint\n";
 		@fwrite($debugFP, $logError);
-		
+
 		reset($_SERVER);
 		global $_srv;
 		array_walk($_SERVER, create_function('&$v,$k','
@@ -91,21 +91,21 @@ $magic_quotes_gpc = get_magic_quotes_gpc();
 					}')
 			);
 		$logError .= "\n$_srv";
-		
+
 		//@mail ("webmaster@kinobg.com", "DEBUG-LOG", $logError, "\nFrom:debug-log@1double.com");
  		}
-	}	
- 
+	}
+
  // function halt() // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  function halt() {
  	global $debugFP;
  	if (defined('DEBUG') && (DEBUG == 1))
  		fclose($debugFP);
-	
+
 	////---- [Mrasnika's] Edition Aug-01-2008
 	global $Cache;
 	$Cache->End();
-	
+
 	die();
 	}
 
@@ -261,7 +261,7 @@ function getRand($a, $b) {
 
 	$SUBS['WEEKDATE'] = date ('d ',$koga). $MONTHS[intval(date('m',$koga))]." $godina1
 				- ".date('d ', $dokoga). $MONTHS[intval(date('m',$dokoga))]." $godina2";
-	
+
 	echo fileParse('_index_header.htmlt');
 	echo fileParse($page);
 	echo fileParse('_index_footer.htmlt');
@@ -343,7 +343,7 @@ function getRand($a, $b) {
 					}
 
 			$new = getAdmSetting('UPLOAD_DIR')."$name.JPG";
-			
+
 			switch ($type) {
 				case 'thumb' :
 					$dst = @ImageCreateFromJPEG(getAdmSetting('TEMPLATES_DIR').'default.jpg');
@@ -367,7 +367,7 @@ function getRand($a, $b) {
 					ImageJPEG($dst, $new);
 					$PICPARAM = getImageSize($new);
 					break;
-					
+
 				case 'video' :
 				case 'dvd' :
 					$dst = @ImageCreateTrueColor($MARGINS['IMG_WIDTH'],$MARGINS['IMG_HEIGHT']);
@@ -462,7 +462,7 @@ function getRand($a, $b) {
  function getWeeks($week) {
  	global $MONTHS;
  	global $span;
- 	
+
  	//razgrafawa se za 2 meseca ot tekuschtata data
  	//wsyaka data se pada petyk-a ot nachaloto na
  	//kino sedmicata
@@ -495,7 +495,7 @@ function getRand($a, $b) {
 		$godina2 = date('Y',$dokoga);
 		if ($godina1 == $godina2)
 			$godina1 = '';
-		
+
 		$datata = date ('d ', $koga).$MONTHS[intval(date('m',$koga))]." $godina1";
 		$datata .= date (' - d ', $dokoga).$MONTHS[intval(date('m',$dokoga))]." $godina2";
 
@@ -503,14 +503,14 @@ function getRand($a, $b) {
 			$Weeks .= "<option value=\"$koga\" SELECTED>$datata";
 			else $Weeks .= "<option value=\"$koga\">$datata";
 		}
- 	
+
  	return $Weeks;
  	}
 
 //function showWeek()
 function showWeek($week) {
 	global $MON;
-	
+
 	$week = week($week);
 
 	$koga = $week;
@@ -519,7 +519,7 @@ function showWeek($week) {
 	$godina2 = date('.Y',$dokoga);
 	if ($godina1 == $godina2)
 		$godina1 = '';
-	
+
 	$datata = date ('d.', $koga).$MON[intval(date('m',$koga))]."$godina1";
 	$datata .= date (' - d.', $dokoga).$MON[intval(date('m',$dokoga))]."$godina2";
 	return $datata;
@@ -540,7 +540,7 @@ function week($ts=0) {
 
  	////----[Mrasnika's] Edition 31.10.2002
  	//return $friday = $today + $friday*86400 ;
- 	
+
  	$friday = $today + $friday*86400 ;
  	$ret = 1 + strToTime (date('d F Y', $friday));
 
@@ -557,7 +557,7 @@ function column($a) {
 //function displayWeek()
 function displayWeek($week) {
 	global $MONTHS;
-	
+
 	$week = week($week);
 
 	$koga = $week;
@@ -566,10 +566,8 @@ function displayWeek($week) {
 	$godina2 = date(' Y',$dokoga);
 	if ($godina1 == $godina2)
 		$godina1 = '';
-	
+
 	$datata = date ('d ', $koga).$MONTHS[intval(date('m',$koga))]."$godina1";
 	$datata .= date (' - d ', $dokoga).$MONTHS[intval(date('m',$dokoga))]."$godina2";
 	return $datata;
 	}
-
-?>
